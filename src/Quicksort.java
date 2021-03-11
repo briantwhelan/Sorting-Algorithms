@@ -71,7 +71,7 @@ public class Quicksort
     }
     
     /**
-     * Partitions array by placing items smaller than pivot to the left 
+     * Partition array by placing items smaller than pivot to the left 
      * of the pivot and items larger than the pivot to the right.
      * 
      * @param array: an unsorted array of integers.
@@ -164,10 +164,10 @@ public class Quicksort
     }
     
     /**
-     * Partitions array by placing items smaller than pivot to the left 
+     * Partition array by placing items smaller than pivot to the left 
      * of the pivot and items larger than the pivot to the right.
      * 
-     * @param array: an unsorted array of doubles.
+     * @param array: an unsorted array of integers.
      * @param low: start index of partition.
      * @param high: end index of partition.
      * @return integer representing index of pivot that array has 
@@ -257,7 +257,7 @@ public class Quicksort
     }
     
     /**
-     * Partitions array by placing items smaller than pivot to the left 
+     * Partition array by placing items smaller than pivot to the left 
      * of the pivot and items larger than the pivot to the right.
      * 
      * @param array: an unsorted array of characters.
