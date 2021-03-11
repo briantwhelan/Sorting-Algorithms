@@ -65,7 +65,7 @@ public class SelectionSortTest
     }
     
 	/**
-     * Test Selection sort for characters
+     * Test selection sort for characters
      */
     @Test
     public void testSortingCharacters()
