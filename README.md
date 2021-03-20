@@ -14,15 +14,12 @@ Various sorting algorithms implemented in Java along with a description of how t
 
 ## Bubble Sort
 #### How It Works
-
+Bubble Sort operates is a very basic...
 #### Space and Time Complexity
 
 #### Potential Improvements
 
 #### Uses and Final Thoughts
-
-
-
 
 ## Insertion Sort
 ### How It Works
