@@ -13,13 +13,16 @@ Various sorting algorithms implemented in Java along with a description of how t
 |     Shell Sort    |        Theta(NlogN)       |         Theta(N^2)         |     Theta(1)     |   Yes   |    Yes   |where N is the length of the array to be sorted
 
 ## Bubble Sort
-### How It Works
+#### How It Works
 
-### Space and Time Complexity
+#### Space and Time Complexity
 
-### Potential Improvements
+#### Potential Improvements
 
-### Uses and Final Thoughts
+#### Uses and Final Thoughts
+
+
+
 
 ## Insertion Sort
 ### How It Works
