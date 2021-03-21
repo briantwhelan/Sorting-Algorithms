@@ -46,7 +46,7 @@ Insertion Sort has a best-case time complexity of Theta(N) as the while loop wil
 Insertion Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of Theta(1).
 
 ### Potential Improvements
-- ***Swap Elements Before Sorting*** - by comparing array[0] with array[array.length - 1] and swapping accordingly, comparing array[1] with array[array.length - 2] and swapping accordingly and so on, we can drastically improve the number of comparisons needed within the insertion sort algorithm. [See here for more information.](http://ijcset.com/docs/IJCSET13-04-05-068.pdf) (I have not implemented this improvement in my algorithm)
+- **Swap Elements Before Sorting** - by comparing array[0] with array[array.length - 1] and swapping accordingly, comparing array[1] with array[array.length - 2] and swapping accordingly and so on, we can drastically improve the number of comparisons needed within the insertion sort algorithm. [See here for more information.](http://ijcset.com/docs/IJCSET13-04-05-068.pdf) (I have not implemented this improvement in my algorithm)
 
 ### Uses and Final Thoughts
 Insertion Sort is widely used, particularly in improving other algorithms for small input sizes. Insertion Sort works very well in cases where the array is sorted or almost sorted, resulting in many algorithms switching to Insertion Sort once the array is almost sorted (Heap Sort, Merge Sort and Quicksort). However, it is not useful on its own for sorting large input sizes due to its order of growth. 
