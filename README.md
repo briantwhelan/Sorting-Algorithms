@@ -95,12 +95,14 @@ Shell Sort is a variation of Insertion Sort that reduces the number of swaps req
 In Shell Sort we introduce a gap between which we compare elements and make swaps. In each pass, we reduce this gap until it becomes 1. On the final pass, it acts exactly like insertion sort. When the gap becomes 0, the array is sorted. (In my implementation, the gap starts at half the array size and is reduced by half in each iteration i.e. `gap = array.length/2 -> array.length/4 -> array.length/8 ...`)
 
 ### Space and Time Complexity
-Shell Sort has a worst-case time complexity of Theta(N^2) due to the nested while loop within a for loop the algorithm requires. Both of these for loops iterate over (almost) the entire length of the array (N), leading to this order of growth.
+Shell Sort has a worst-case time complexity of Theta(N^2) due to the nested for loops the algorithm requires. The outer for loop contributes Theta(logN) while the inner two for loops contribute Theta(N^2). This results in a Theta(logN * N^2) worst-case time complexity but is in fact better. If we introduce the gap variable we see that it becomes Theta(N^2). In simpler terms, Shell Sort is just Insertion Sort with a gap, which makes it at the very worst Theta(N^2).
 
-Shell Sort has a best-case time complexity of Theta(NlogN) as the while loop will not be entered if every element that is being inserted is greater than the largest element currently in the sorted part. This only occurs when the array to be sorted is in fact already sorted.
+Shell Sort has a best-case time complexity of Theta(NlogN) as the outer for loop will be executed logN times as we reduce the gap by half each time and the inner loop will execute N times. The innermost loop will act as constant time expression if it is never executed, which it won't be in the case that the array is already sorted. Hence, we get a worst-case time complexity of Theta(NlogN).
 
-Shell Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of Theta(1).
+Shell Sort is is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of Theta(1).
 
 ### Potential Improvements
+- **Gap Sequences** - choosing the right gap size can improve the algorithm further but this depends on a variety of factors. I've just gone with a basic approach which leads to a worst-case runtime of Theta(N^2) but this can be improved upon by changing the gap sequence. For example, using Hibbard's Sequence or Sedgewick's Sequence lead to better worse-case time complexities.
 
 ### Uses and Final Thoughts
+Shell Sort is an adapted version of Insertion Sort but this adaptation results in the loss of stability. Insertion sort does not perform well when the gaps between elements are large, and this is where Shell Sort comes in. By introducing the gap sequence, less swaps will be required when the gap between two elements is large.
