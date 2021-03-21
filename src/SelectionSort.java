@@ -22,10 +22,10 @@ public class SelectionSort
     {
     	if(array != null)
     	{   		
-	    	//One by one move boundary of unsorted array
+	    	//One by one move boundary of unsorted part of array
 	    	for(int i = 0; i < array.length - 1; i++)
 	    	{
-	    		//Find the minimum element in unsorted array
+	    		//Find the minimum element in unsorted part of array
 	    		int min_idx = i;
 	    		for(int j = i + 1; j < array.length; j++)
 	    		{
@@ -35,7 +35,7 @@ public class SelectionSort
 	    			}
 	    		}
 	
-	    		//Swap the found minimum element with the first element in unsorted array
+	    		//Swap the found minimum element with the first element in unsorted part of array
 	    		int temp = array[min_idx];
 	    		array[min_idx] = array[i];
 	    		array[i] = temp;
@@ -52,10 +52,10 @@ public class SelectionSort
     {
     	if(array != null)
     	{   		
-	    	//One by one move boundary of unsorted array
+    		//One by one move boundary of unsorted part of array
 	    	for(int i = 0; i < array.length - 1; i++)
 	    	{
-	    		//Find the minimum element in unsorted array
+	    		//Find the minimum element in unsorted part of array
 	    		int min_idx = i;
 	    		for(int j = i + 1; j < array.length; j++)
 	    		{
@@ -82,10 +82,10 @@ public class SelectionSort
     {
     	if(array != null)
     	{   		
-	    	//One by one move boundary of unsorted array
+    		//One by one move boundary of unsorted part of array
 	    	for(int i = 0; i < array.length - 1; i++)
 	    	{
-	    		//Find the minimum element in unsorted array
+	    		//Find the minimum element in unsorted part of array
 	    		int min_idx = i;
 	    		for(int j = i + 1; j < array.length; j++)
 	    		{
@@ -94,7 +94,7 @@ public class SelectionSort
 	    				min_idx = j;
 	    			}
 	    		}
-	
+	    		
 	    		//Swap the found minimum element with the first element in unsorted array
 	    		char temp = array[min_idx];
 	    		array[min_idx] = array[i];

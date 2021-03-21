@@ -22,7 +22,7 @@ public class InsertionSort
     {
     	if(array != null)
     	{ 		
-    		//Insert each element into correct part of sorted array
+    		//Insert each element into correct position of sorted part of array
 	    	for(int i = 1; i < array.length; i++)
 	    	{   	
 	    		//Swap until j reaches start of array or previous element is smaller
@@ -47,7 +47,7 @@ public class InsertionSort
     {
     	if(array != null)
     	{ 		
-    		//Insert each element into correct part of sorted array
+    		//Insert each element into correct position of sorted part of array
 	    	for(int i = 1; i < array.length; i++)
 	    	{   	
 	    		//Swap until j reaches start of array or previous element is smaller
@@ -72,7 +72,7 @@ public class InsertionSort
     {
     	if(array != null)
     	{ 		
-    		//Insert each element into correct part of sorted array
+    		//Insert each element into correct position of sorted part of array
 	    	for(int i = 1; i < array.length; i++)
 	    	{   	
 	    		//Swap until j reaches start of array or previous element is smaller

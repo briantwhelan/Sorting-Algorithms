@@ -71,12 +71,22 @@ Insertion Sort is widely used, particularly in improving other algorithms for sm
 
 ## Selection Sort
 ### How It Works
+Selection Sort works by splitting the array conceptually into two parts: a sorted part and an unsorted part. At the beginning of the algorithm, the sorted part consists of no elements, while the all the elements exist in the unsorted part. 
+
+With every pass, the algorithm searches through the unsorted part to find the minimum element. This minimum element is then swapped into the sorted part starting at index 0. With every pass, the sorted part grows by one and the unsorted part shrinks by one until the unsorted part consists of only a single element (as we know the array is sorted at this point). 
 
 ### Space and Time Complexity
+Selection Sort has a worst-case time complexity of Theta(N^2) due to the nested for loops the algorithm requires. Both of these for loops iterate over (almost) the entire length of the array (N), leading to this order of growth.
+
+Selection Sort has a best-case time complexity of Theta(N^2) as regardless of input the two nested for loops will be executed. With every pass we need to find the minimum element in the unsorted part, and in order to do this we need to look through every element in the unsorted part. This results in every input being a worst-case input.
+
+Selection Sort is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of Theta(1).
 
 ### Potential Improvements
+-**Find Maximum Element As Well** - in each pass we find the minimum element in the unsorted part of the array and place it in the correct position in the sorted part. We could also find the maximum element on each pass and then place this at its correct position in the sorted part of the array also. (I have not implemented this improvement in my algorithm)
 
 ### Uses and Final Thoughts
+Selection Sort may be used when auxiliary memory is limited and where a minimal number of swaps is required. However, its quadratic order of growth makes it unusable for large input sizes and Insertion Sort is generally a better option for smaller arrays. The main advantage of Selection Sort is that it makes the minimal number of swaps in the worst case (N - 1 swaps where N is the length of the array).
 
 ## Shell Sort
 ### How It Works
