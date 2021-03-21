@@ -19,7 +19,11 @@ Bubble Sort has a best-case time complexity of Theta(N) as we can exit the loops
 Bubble Sort in both stable and in-place. It does not require any additional memory meaning it has a space complexity of Theta(1).
 ### Potential Improvements
 - **Already Sorted Arrays** - exiting the loops if the array is already sorted is worthwhile as it results in a performance of Theta(N) in the case that the array is already sorted. (I have implemented this improvement in my algorithm)
-- **Reducing Length of Inner Loop** - with the knowledge that after every pass the next largest element will be in its correct position towards the end of the array, we can reduce the length of the array we have to traverse in every pass of the inner loop. Instead of going through the entire length of the array, we can offset it with the current position of the outer for loop. In other words, instead of ```javascript for(int j = 0; j < array.length - 1; j++)```, we can have ```java for(int j = 0; j < array.length - i - 1)```. (I have implemented this improvement in my algorithm).
+- **Reducing Length of Inner Loop** - with the knowledge that after every pass the next largest element will be in its correct position towards the end of the array, we can reduce the length of the array we have to traverse in every pass of the inner loop. Instead of going through the entire length of the array, we can offset it with the current position of the outer for loop. In other words, instead of 
+```java
+ for(int j = 0; j < array.length - 1; j++)
+ ```
+ , we can have ```java for(int j = 0; j < array.length - i - 1)```. (I have implemented this improvement in my algorithm).
 ### Uses and Final Thoughts
 
 ## Insertion Sort
