@@ -92,7 +92,7 @@ Selection Sort may be used when auxiliary memory is limited and where a minimal 
 ### How It Works
 Shell Sort is a variation of Insertion Sort that reduces the number of swaps required in the case where an element being inserted into the sorted part of the array requires many swaps.
 
-In Shell Sort we introduce a gap between which we compare elements and make swaps. In each pass, we reduce this gap until it becomes 1. On the final pass, it acts exactly like insertion sort. When the gap becomes 0, the array is sorted. (In my implementation, the gap starts at half the array size and is reduced by half in each iteration i.e. '''gap = array.length/2 -> array.length/4 -> array.length/8 ...)
+In Shell Sort we introduce a gap between which we compare elements and make swaps. In each pass, we reduce this gap until it becomes 1. On the final pass, it acts exactly like insertion sort. When the gap becomes 0, the array is sorted. (In my implementation, the gap starts at half the array size and is reduced by half in each iteration i.e. '''gap = array.length/2 -> array.length/4 -> array.length/8 ...```)
 
 ### Space and Time Complexity
 Shell Sort has a worst-case time complexity of Theta(N^2) due to the nested while loop within a for loop the algorithm requires. Both of these for loops iterate over (almost) the entire length of the array (N), leading to this order of growth.
