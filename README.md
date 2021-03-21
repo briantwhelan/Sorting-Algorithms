@@ -27,7 +27,7 @@ Bubble Sort is both a stable and in-place sorting algorithm. It does not require
 
 ### Potential Improvements
 - **Already Sorted Arrays** - exiting the loops if the array is already sorted is worthwhile as it results in a performance of Theta(N) in the case that the array is already sorted. (I have implemented this improvement in my algorithm)
-- **Reducing Length of Inner Loop** - with the knowledge that after every pass the next largest element will be in its correct position towards the end of the array, we can reduce the length of the array we have to traverse in every pass of the inner loop. Instead of going through the entire length of the array, we can offset it with the current position of the outer for loop. In other words, instead of ```for(int j = 0; j < array.length - 1; j++)```, we can have ```for(int j = 0; j < array.length - i - 1)```(I have implemented this improvement in my algorithm)
+- **Reducing Length of Inner Loop** - with the knowledge that after every pass the next largest element will be in its correct position towards the end of the array, we can reduce the length of the array we have to traverse in every pass of the inner loop. Instead of going through the entire length of the array, we can offset it with the current position of the outer for loop. In other words, instead of `for(int j = 0; j < array.length - 1; j++)`, we can have `for(int j = 0; j < array.length - i - 1)`(I have implemented this improvement in my algorithm)
 
 ### Uses and Final Thoughts
 Bubble Sort is an easily understandable algorithm and has as advantage over many sorting algorithms (but not insertion sort) in that it can detect when the array is already sorted. However, in reality, there are far better algorithms for efficiency and Bubble Sort's order of growth makes it unusable for larger input sizes. For these reasons, it is rarely used other than for educational purposes. 
@@ -92,7 +92,7 @@ Selection Sort may be used when auxiliary memory is limited and where a minimal 
 ### How It Works
 Shell Sort is a variation of Insertion Sort that reduces the number of swaps required in the case where an element being inserted into the sorted part of the array requires many swaps.
 
-In Shell Sort we introduce a gap between which we compare elements and make swaps. In each pass, we reduce this gap until it becomes 1. On the final pass, it acts exactly like insertion sort. When the gap becomes 0, the array is sorted. (In my implementation, the gap starts at half the array size and is reduced by half in each iteration i.e. '''gap = array.length/2 -> array.length/4 -> array.length/8 ...```)
+In Shell Sort we introduce a gap between which we compare elements and make swaps. In each pass, we reduce this gap until it becomes 1. On the final pass, it acts exactly like insertion sort. When the gap becomes 0, the array is sorted. (In my implementation, the gap starts at half the array size and is reduced by half in each iteration i.e. `gap = array.length/2 -> array.length/4 -> array.length/8 ...`)
 
 ### Space and Time Complexity
 Shell Sort has a worst-case time complexity of Theta(N^2) due to the nested while loop within a for loop the algorithm requires. Both of these for loops iterate over (almost) the entire length of the array (N), leading to this order of growth.
