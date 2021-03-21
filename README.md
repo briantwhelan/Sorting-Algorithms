@@ -102,7 +102,7 @@ Shell Sort has a best-case time complexity of Theta(NlogN) as the outer for loop
 Shell Sort is is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of Theta(1).
 
 ### Potential Improvements
-- **Gap Sequences** - choosing the right gap size can improve the algorithm further but this depends on a variety of factors. I've just gone with a basic approach which leads to a worst-case runtime of $\theta$(N<sup>2</sup>) but this can be improved upon by changing the gap sequence. For example, using Hibbard's Sequence or Sedgewick's Sequence lead to better worse-case time complexities.
+- **Gap Sequences** - choosing the right gap size can improve the algorithm further but this depends on a variety of factors. I've just gone with a basic approach which leads to a worst-case runtime of &theta(N<sup>2</sup>) but this can be improved upon by changing the gap sequence. For example, using Hibbard's Sequence or Sedgewick's Sequence lead to better worse-case time complexities.
 
 ### Uses and Final Thoughts
 Shell Sort is an adapted version of Insertion Sort but this adaptation results in the loss of stability. Insertion sort does not perform well when the gaps between elements are large, and this is where Shell Sort comes in. By introducing the gap sequence, less swaps will be required when the gap between two elements is large.
