@@ -1,6 +1,4 @@
 # Sorting-Algorithms
-Various sorting algorithms implemented in Java along with a description of how they work and their respective runtimes
-
 ## Overview
 
 | Sorting Algorithm | Best-case Time Complexity | Worst-case Time Complexity | Space Complexity | Stable? | Inplace? |
