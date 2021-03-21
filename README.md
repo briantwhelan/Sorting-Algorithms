@@ -23,7 +23,11 @@ Bubble Sort in both stable and in-place. It does not require any additional memo
 ```java
  for(int j = 0; j < array.length - 1; j++)
  ```
- , we can have ```java for(int j = 0; j < array.length - i - 1)```. (I have implemented this improvement in my algorithm).
+ , we can have 
+ ```java 
+ for(int j = 0; j < array.length - i - 1)
+ ```
+ . (I have implemented this improvement in my algorithm).
 ### Uses and Final Thoughts
 
 ## Insertion Sort
