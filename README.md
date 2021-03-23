@@ -7,8 +7,8 @@
 |   Insertion Sort  |          &Theta;(N)         |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
 |     Merge Sort    |        &Theta;(NlogN)       |        &Theta;(NlogN)        |     &Theta;(N)     |   Yes   |    No    |
 |     Quicksort     |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |    &Theta;(logN)   |    No   |    Yes   |
-|   Selection Sort  |         &Theta;(N<sup>2</sup>)        |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
-|     Shell Sort    |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
+|   Selection Sort  |         &Theta;(N<sup>2</sup>)        |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
+|     Shell Sort    |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
 
 where N is the length of the array to be sorted
 
