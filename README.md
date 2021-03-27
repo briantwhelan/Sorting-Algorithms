@@ -23,7 +23,7 @@ Bubble Sort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to th
 
 Bubble Sort has a best-case time complexity of &Theta;(N) as we can exit the loops if we go through a full pass and find no swaps occurred. This only occurs when the array to be sorted is in fact already sorted.
 
-Bubble Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of &Theta;(1).
+Bubble Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a worst-case space complexity of &Theta;(1).
 
 ### Potential Improvements
 - **Already Sorted Arrays** - exiting the loops if the array is already sorted is worthwhile as it results in a performance of &Theta;(N) in the case that the array is already sorted. (I have implemented this improvement in my algorithm)
@@ -43,7 +43,7 @@ Insertion Sort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to
 
 Insertion Sort has a best-case time complexity of &Theta;(N) as the while loop will not be entered if every element that is being inserted is greater than the largest element currently in the sorted part. This only occurs when the array to be sorted is in fact already sorted.
 
-Insertion Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of &Theta;(1).
+Insertion Sort is both a stable and in-place sorting algorithm. It does not require any additional memory meaning it has a worst-case space complexity of &Theta;(1).
 
 ### Potential Improvements
 - **Swap Elements Before Sorting** - by comparing array[0] with array[array.length - 1] and swapping accordingly, comparing array[1] with array[array.length - 2] and swapping accordingly and so on, we can drastically improve the number of comparisons needed within the insertion sort algorithm. [See here for more information.](http://ijcset.com/docs/IJCSET13-04-05-068.pdf) (I have not implemented this improvement in my algorithm)
@@ -62,12 +62,27 @@ Insertion Sort is widely used, particularly in improving other algorithms for sm
 
 ## Quicksort
 ### How It Works
+Quicksort works by recursively partitioning the array around a pivot. In other words, Quicksort takes an arbitrary element, called the pivot, and places all elements smaller than that element to the left and all elements larger than that element to the right. This process is repeated recursively to sort the array.
+
+The partitioning is where the sorting happens. In this partitioning, we take the the first element in the array to be our pivot (this is an implementation decision - the pivot could be any other element). We then continuously find both the leftmost element larger than the pivot and the rightmost element smaller than the pivot. These elements are then swapped. This process stops once all elements greater than the pivot lie to its right and all elements smaller lie to its left.
+
+With each recursive call, the array is broken down into two smaller subarrays, which eventually leads to the subarrays of one or two elements, which will be in sorted order following partitioning. The recursive unravelling from this point leaves the array in a sorted state.
 
 ### Space and Time Complexity
+Quicksort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to the fact that if the pivot chosen is the largest or smallest element in that subarray, we are essentially only going to have elements to the left or right of the pivot. This leads to many more recursively calls and this order of growth. This performance happens when the array is almost sorted or completely sorted, hence it is recommended to shuffle the array prior to sorting.
+
+Quicksort has a best-case time complexity of &Theta;(NlogN) as in an ideal scenario, the pivot chosen results in half the elements lying to its left and the other half to its left. This wold divide the array in half we each recursive call and lead to this performance.
+
+Quicksort is not stable but is an in-place sorting algorithm. However, it does require additional memory due to the recursive calls meaning it has a worst-case space complexity of &Theta;(N).
 
 ### Potential Improvements
-
+- **Shuffle Array Before Sorting** - as mentioned previously, Quicksort has quadratic performance in cases where the array is sorted or almost sorted. Hence, by shuffling the array prior to sorting, we can minimise the chance of this performance occurring. (I have implemented this improvement in my algorithm)
+- **Use Insertion Sort For Small Subarrays** - by making use of Insertion Sort instead of performing additional partitions when the subarray size becomes relatively small (<10), the performance can be improved. (I have not implemented this improvement in my algorithm)
+- **Use Median Value For Pivot** - ideally, the pivot would be the middle element but the time it would take to calculate this precisely would far outweigh the performance benefit. However, we could take the median of a small number of values (say the first three elements) which may lead to better performance. (I have not implemented this improvement in my algorithm)
+- **3-Way Quicksort** - instead of partitioning elements into smaller than and larger than subarrays, we could partition the array into smaller than, equal to and larger than subarrays. This prevents poor performance when many of the same element exist in the array. (I have not implemented this improvement in my algorithm)
+- **2-Pivot and 3-Pivot Quicksort** - we could use two or three pivots to enable us to partition the array into more subarrays. This results in fewer cache misses and improves cache performance. (I have not implemented this improvement in my algorithm)
 ### Uses and Final Thoughts
+Quicksort is widely used and is considered one of the better sorting algorithms for average performance. While its worst-case order of growth is poor, this can be avoided through shuffling the array prior to sorting. In fact, Quicksort's average-case performance is &Theta;(NlogN) and hence it is used in many libraries.
 
 ## Selection Sort
 ### How It Works
@@ -80,7 +95,7 @@ Selection Sort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to
 
 Selection Sort has a best-case time complexity of &Theta;(N<sup>2</sup>) as regardless of input the two nested for loops will be executed. With every pass we need to find the minimum element in the unsorted part, and in order to do this we need to look through every element in the unsorted part. This results in every input being a worst-case input.
 
-Selection Sort is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of &Theta;(1).
+Selection Sort is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a worst-case space complexity of &Theta;(1).
 
 ### Potential Improvements
 - **Find Maximum Element As Well** - in each pass we find the minimum element in the unsorted part of the array and place it in the correct position in the sorted part. We could also find the maximum element on each pass and then place this at its correct position in the sorted part of the array also. (I have not implemented this improvement in my algorithm)
@@ -99,7 +114,7 @@ Shell Sort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to the
 
 Shell Sort has a best-case time complexity of &Theta;(NlogN) as the outer for loop will be executed logN times as we reduce the gap by half each time and the inner loop will execute N times. The innermost loop will act as constant time expression if it is never executed, which it won't be in the case that the array is already sorted. Hence, we get a worst-case time complexity of &Theta;(NlogN).
 
-Shell Sort is is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a space complexity of &Theta;(1).
+Shell Sort is is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a worst-case space complexity of &Theta;(1).
 
 ### Potential Improvements
 - **Gap Sequences** - choosing the right gap size can improve the algorithm further but this depends on a variety of factors. I've just gone with a basic approach which leads to a worst-case runtime of &Theta;(N<sup>2</sup>) but this can be improved upon by changing the gap sequence. For example, using Hibbard's Sequence or Sedgewick's Sequence lead to better worse-case time complexities.
