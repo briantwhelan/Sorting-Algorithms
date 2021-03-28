@@ -6,7 +6,7 @@
 |    Bubble Sort    |          &Theta;(N)         |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
 |   Insertion Sort  |          &Theta;(N)         |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
 |     Merge Sort    |        &Theta;(NlogN)       |        &Theta;(NlogN)        |     &Theta;(N)     |   Yes   |    No    |
-|     Quicksort     |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |    &Theta;(logN)   |    No   |    Yes   |
+|     Quicksort     |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |    &Theta;(N)   |    No   |    Yes   |
 |   Selection Sort  |         &Theta;(N<sup>2</sup>)        |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
 |     Shell Sort    |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
 
@@ -53,12 +53,28 @@ Insertion Sort is widely used, particularly in improving other algorithms for sm
 
 ## Merge Sort
 ### How It Works
+Merge Sort works by dividing the array into two halves (repeatedly) and then merging the two sorted halves afterwards. Merge Sort can be implemented in two different ways: using a top-down approach (which is recursive) or using a bottom-up approach (which is iterative).
+
+In the top-down approach, the array is divided in two and the Merge Sort is recursively called on the two halves. Once the subarrays created by this consist of just a single element, the process of merging the subarrays can begin. As the recursion unravels, the subarrays are merged with each other such that the merged array is in sorted order.
+
+In the bottom-up approach, the array is also divided in two halves but two for loops are used instead of recursive calls to Merge Sort. The loops start by merging subarrays of size 1, then merging the subarrays of size 2, then merging the subarrays of size 4, then 8, and so on until all sorted subarrays have been merged into an array in sorted order.
+
+In both approaches, merging the subarrays together plays an important role. This is done by making use of an auxiliary array. Firstly, the elements from the two subarrays are copied to this auxiliary array before they are merged back into the original such that they are in sorted order. 
 
 ### Space and Time Complexity
+Merge Sort has a worst-case time complexity of &Theta;(NlogN) as the array is continuously divided in halves and the merging of these subarrays takes linear time, leading to this order of growth. This is the best possible worst-case time complexity possible (without relying other special cases).
+
+Merge Sort has a best-case time complexity of &Theta;(NlogN) as the array is continuously divided in halves and the merging of these subarrays takes linear time, leading to this order of growth.
+
+Merge Sort is stable but is not an in-place sorting algorithm. It requires additional memory for the auxiliary array meaning it has a worst-case space complexity of &Theta;(N).
 
 ### Potential Improvements
+- **Use Insertion Sort For Small Subarrays** - by making use of Insertion Sort instead of performing additional merges when the array is nearly sorted (~10 items left to be sorted), the performance can be improved. (I have not implemented this improvement in my algorithm)
+- **Stop Merging If Already Sorted** - by checking if the largest element in the first half is smaller than the smallest element in the second half, we can determine whether the array is already sorted. If this is the case, we can prevent the algorithm from doing pointless merges and hence improve performance. (I have implemented this improvement in my algorithm)
+- **Eliminate Time Taken To Copy To The Auxiliary Array** - we can use the two recursive invocations of Merge Sort (in the top-down approach) to eliminate the time taken to copy the subarrays to the auxiliary array. This is done by alternating which array is considered the input and which gets the sorted output, i.e. in one the input is the array itself and it puts the sorted output in the auxiliary array while in the other the auxiliary array is the input and it puts the sorted output in the array itself. (I have not implemented this improvement in my algorithm)
 
 ### Uses and Final Thoughts
+Merge Sort is stable and has the best possible worst-case performance (&Theta;(N)), which makes it very useful. While it is worse than Quicksort in the average case, it is still widely used and provides guarantees that Quicksort cannot provide. In particular, it is excellent for sorting linked lists.
 
 ## Quicksort
 ### How It Works
@@ -73,7 +89,7 @@ Quicksort has a worst-case time complexity of &Theta;(N<sup>2</sup>) due to the 
 
 Quicksort has a best-case time complexity of &Theta;(NlogN) as in an ideal scenario, the pivot chosen results in half the elements lying to its left and the other half to its left. This wold divide the array in half we each recursive call and lead to this performance.
 
-Quicksort is not stable but is an in-place sorting algorithm. However, it does require additional memory due to the recursive calls meaning it has a worst-case space complexity of &Theta;(N).
+Quicksort is not stable but is an in-place sorting algorithm. However, it does require additional memory due to the recursive calls meaning it has a worst-case space complexity of &Theta;(N). This worst-case space complexity can be improved to &Theta;(N) with some minor modifications o the algorithm.
 
 ### Potential Improvements
 - **Shuffle Array Before Sorting** - as mentioned previously, Quicksort has quadratic performance in cases where the array is sorted or almost sorted. Hence, by shuffling the array prior to sorting, we can minimise the chance of this performance occurring. (I have implemented this improvement in my algorithm)

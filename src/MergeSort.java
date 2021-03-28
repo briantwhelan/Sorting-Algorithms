@@ -69,7 +69,7 @@ public class MergeSort
     }
     
     /**
-     * Recursively use merge sort to sort array using bottom-up merge sort.
+     * Iteratively use merge sort to sort array using bottom-up merge sort.
      *
      * @param array: an unsorted array of integers.
      * @param aux: an auxiliary array to aid sorting
@@ -171,7 +171,7 @@ public class MergeSort
     }
     
     /**
-     * Recursively use merge sort to sort array using bottom-up merge sort.
+     * Iteratively use merge sort to sort array using bottom-up merge sort.
      *
      * @param array: an unsorted array of doubles.
      * @param aux: an auxiliary array to aid sorting
@@ -273,7 +273,7 @@ public class MergeSort
     }
     
     /**
-     * Recursively use merge sort to sort array using bottom-up merge sort.
+     * Iteratively use merge sort to sort array using bottom-up merge sort.
      *
      * @param array: an unsorted array of characters.
      * @param aux: an auxiliary array to aid sorting
