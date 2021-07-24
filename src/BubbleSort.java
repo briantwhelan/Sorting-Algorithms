@@ -31,12 +31,12 @@ public class BubbleSort
     	    	    if(array[j] > array[j + 1]) 
     	    	    {
     	    	        //Array is not sorted as swap was needed
-    	    		    sorted = false;
+    	    	        sorted = false;
 
-    	    		    //Swaps array[j + 1] and array[j] 
-    	    		    int temp = array[j]; 
-    	    		    array[j] = array[j + 1]; 
-    	    		    array[j + 1] = temp; 
+    	    	        //Swaps array[j + 1] and array[j] 
+    	    	        int temp = array[j]; 
+    	    	        array[j] = array[j + 1]; 
+    	    	        array[j + 1] = temp; 
     	    	    }
     	    	}
     	    }
