@@ -29,8 +29,8 @@ public class BubbleSort
     	    	for(int j = 0; j < array.length - i - 1; j++)
     	    	{
     	    	    if(array[j] > array[j + 1]) 
-    	    	    { 
-    	    		    //Array is not sorted as swap was needed
+    	    	    {
+    	    	        //Array is not sorted as swap was needed
     	    		    sorted = false;
 
     	    		    //Swaps array[j + 1] and array[j] 
