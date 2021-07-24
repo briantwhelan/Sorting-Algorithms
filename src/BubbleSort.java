@@ -59,14 +59,14 @@ public class BubbleSort
     	    	for(int j = 0; j < array.length - i - 1; j++)
     	    	{
     	    	    if(array[j] > array[j + 1]) 
-    	    	    { 
-    	    		    //Array is not sorted as swap was needed
-    	    		    sorted = false;
+    	    	    {
+    	    	        //Array is not sorted as swap was needed
+    	    	        sorted = false;
 
-    	    		    //Swaps array[j + 1] and array[j] 
-    	    		    double temp = array[j]; 
-    	    		    array[j] = array[j + 1]; 
-    	    		    array[j + 1] = temp; 
+    	    	        //Swaps array[j + 1] and array[j] 
+    	    	        double temp = array[j]; 
+    	    	        array[j] = array[j + 1]; 
+    	    	        array[j + 1] = temp; 
     	    	    }
     	    	}
     	    }
@@ -89,14 +89,14 @@ public class BubbleSort
     	    	for(int j = 0; j < array.length - i - 1; j++)
     	    	{
     	    	    if(array[j] > array[j + 1]) 
-    	    	    { 
-    	    		    //Array is not sorted as swap was needed
-    	    		    sorted = false;
+    	    	    {
+    	    	        //Array is not sorted as swap was needed
+    	    	        sorted = false;
 
-    	    		    //Swaps array[j + 1] and array[j] 
-    	    		    char temp = array[j]; 
-    	    		    array[j] = array[j + 1]; 
-    	    		    array[j + 1] = temp; 
+    	    	        //Swaps array[j + 1] and array[j] 
+    	    	        char temp = array[j]; 
+    	    	        array[j] = array[j + 1]; 
+    	    	        array[j + 1] = temp; 
     	    	    }
     	    	}
     	    }
