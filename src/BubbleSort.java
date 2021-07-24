@@ -1,52 +1,52 @@
 /*************************************************************************
- *  Bubble Sort class.
+ *  {@code BubbleSort} class.
  *
- *  @version 1.0 13/3/21
+ *  @version 24/7/21
  *
  *  @author Brian Whelan
  *
  *************************************************************************/
 public class BubbleSort 
 {
-	/**
+    /**
      * Don't let anyone instantiate this class.
      */
-	private BubbleSort() {}
+    private BubbleSort() {}
 	
-	/**
-     * Sort an array of integers using bubble sort in ascending order.
+    /**
+     * Sorts the specified array of integers in ascending order using bubble sort.
      * 
-     * @param array: an unsorted array of integers.
+     * @param array the unsorted array of integers
      */
     public static void sortInts(int[] array)
     {
-       	if(array != null)
-    	{
-    		boolean sorted = false;
+        if(array != null)
+        {
+    	    boolean sorted = false;
 	        for(int i = 0; (i < array.length - 1) && (!sorted); i++) 
 	        {
-	        	sorted = true;
+	            sorted = true;
 	            for(int j = 0; j < array.length - i - 1; j++)
 	            {
 	                if(array[j] > array[j + 1]) 
 	                { 
-	                	//Array is not sorted as swap was needed
-	                	sorted = false;
+	                    //Array is not sorted as swap was needed
+	                    sorted = false;
 	                	
-	                	//Swap array[j + 1] and array[j] 
+	                    //Swaps array[j + 1] and array[j] 
 	                    int temp = array[j]; 
 	                    array[j] = array[j + 1]; 
 	                    array[j + 1] = temp; 
 	                }
 	            }
 	        }
-    	}
+        }
     }
     
 	/**
-     * Sort an array of doubles using bubble sort in ascending order.
+     * Sorts the specified array of doubles in ascending order using bubble sort.
      * 
-     * @param array: an unsorted array of doubles.
+     * @param array the unsorted array of doubles
      */
     public static void sortDoubles(double[] array)
     {
@@ -63,7 +63,7 @@ public class BubbleSort
 	                	//Array is not sorted as swap was needed
 	                	sorted = false;
 	                	
-	                	//Swap array[j + 1] and array[j] 
+	                	//Swaps array[j + 1] and array[j] 
 	                    double temp = array[j]; 
 	                    array[j] = array[j + 1]; 
 	                    array[j + 1] = temp; 
@@ -74,13 +74,13 @@ public class BubbleSort
     }
     
 	/**
-     * Sort an array of characters using bubble sort in alphabetical order.
+     * Sorts the specified array of characters in ascending order using bubble sort.
      * 
-     * @param array: an unsorted array of characters.
+     * @param array the unsorted array of characters
      */
     public static void sortChars(char[] array)
     {
-    	if(array != null)
+       	if(array != null)
     	{
     		boolean sorted = false;
 	        for(int i = 0; (i < array.length - 1) && (!sorted); i++) 
@@ -93,7 +93,7 @@ public class BubbleSort
 	                	//Array is not sorted as swap was needed
 	                	sorted = false;
 	                	
-	                	//Swap array[j + 1] and array[j] 
+	                	//Swaps array[j + 1] and array[j] 
 	                    char temp = array[j]; 
 	                    array[j] = array[j + 1]; 
 	                    array[j + 1] = temp; 
