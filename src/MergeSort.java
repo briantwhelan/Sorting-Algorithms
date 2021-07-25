@@ -23,13 +23,13 @@ public class MergeSort
        	if(array != null)
     	{   		
     	    //Creates auxiliary array to aid sorting
-	        int[] aux = new int[array.length];
+            int[] aux = new int[array.length];
 	    	
-	        //Top-Down Merge Sort (recursive)
-	        //sortInts(array, aux, 0, array.length - 1);
+            //Top-Down Merge Sort (recursive)
+            //sortInts(array, aux, 0, array.length - 1);
 	    	
-	        //Bottom-Up Merge Sort (iterative)
-	        sortInts(array, aux);
+            //Bottom-Up Merge Sort (iterative)
+            sortInts(array, aux);
     	}
     }
     
@@ -122,16 +122,16 @@ public class MergeSort
      */
     public static void sortDoubles(double[] array)
     {
-    	if(array != null)
+       	if(array != null)
     	{   		
-    		//Create auxiliary array to aid sorting
-	    	double[] aux = new double[array.length];
+    	    //Creates auxiliary array to aid sorting
+            double[] aux = new double[array.length];
 	    	
-	    	//Top-Down Merge Sort (recursive)
-	    	//sortDoubles(array, aux, 0, array.length - 1);
+            //Top-Down Merge Sort (recursive)
+            //sortInts(array, aux, 0, array.length - 1);
 	    	
-	    	//Bottom-Up Merge Sort (iterative)
-	    	sortDoubles(array, aux);
+            //Bottom-Up Merge Sort (iterative)
+            sortDoubles(array, aux);
     	}
     }
     
@@ -148,25 +148,25 @@ public class MergeSort
     	boolean sorted = false;
     	if((low < high) && !sorted) 
     	{
-    		//Find middle point
-	    	int mid = low + (high - low) / 2;
+    	    //Find middle point
+    	    int mid = low + (high - low) / 2;
 	    	
-	    	//Sort first half
-	    	sortDoubles(array, aux, low, mid);
+    	    //Sort first half
+    	    sortDoubles(array, aux, low, mid);
 	    	
-	    	//Sort second half
-	    	sortDoubles(array, aux, mid + 1, high);
+    	    //Sort second half
+    	    sortDoubles(array, aux, mid + 1, high);
 	    	
-	    	//Stop if already sorted
-	    	if(array[mid] < array[mid + 1])
-	    	{
-	    		sorted = true;
-	    	}
-	    	else
-	    	{
-	    		//Merge the two sorted halves
-	    		merge(array, aux, low, mid, high);
-	    	}
+    	    //Stop if already sorted
+    	    if(array[mid] < array[mid + 1])
+            {
+    	        sorted = true;
+            }
+            else
+            {
+                //Merge the two sorted halves
+                merge(array, aux, low, mid, high);
+            }
     	}
     }
     
@@ -181,10 +181,10 @@ public class MergeSort
     	//Pass through array and merge subarrays of size 1, 2, 4, ...
     	for(int size = 1; size < array.length; size = size + size)
     	{
-    		for(int low = 0; low < array.length - size; low += size + size)
-    		{
-    			merge(array, aux, low, low + size - 1, Math.min(low + size + size - 1, array.length - 1));
-    		}
+    	    for(int low = 0; low < array.length - size; low += size + size)
+            {
+    	        merge(array, aux, low, low + size - 1, Math.min(low + size + size - 1, array.length - 1));
+    	    }
     	}
     }
     
@@ -202,7 +202,7 @@ public class MergeSort
     	//Copy elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
     	{
-    		aux[k] = array[k];
+    	    aux[k] = array[k];
     	}
     	
     	//Merge copied elements back into original array in sorted order
@@ -210,10 +210,10 @@ public class MergeSort
     	int j = mid + 1;
     	for(int k = low; k <= high; k++)
     	{
-    		if		(i > mid)			array[k] = aux[j++];
-    		else if (j > high)			array[k] = aux[i++];
-    		else if (aux[j] < aux[i])	array[k] = aux[j++];
-    		else 						array[k] = aux[i++];
+    	    if      (i > mid)           array[k] = aux[j++];
+    	    else if (j > high)          array[k] = aux[i++];
+    	    else if (aux[j] < aux[i])   array[k] = aux[j++];
+    	    else                        array[k] = aux[i++];
     	}	
     }
     
@@ -224,16 +224,16 @@ public class MergeSort
      */
     public static void sortChars(char[] array)
     {
-    	if(array != null)
+       	if(array != null)
     	{   		
-    		//Create auxiliary array to aid sorting
-	    	char[] aux = new char[array.length];
+    	    //Creates auxiliary array to aid sorting
+            char[] aux = new char[array.length];
 	    	
-	    	//Top-Down Merge Sort (recursive)
-	    	//sortChars(array, aux, 0, array.length - 1);
+            //Top-Down Merge Sort (recursive)
+            //sortInts(array, aux, 0, array.length - 1);
 	    	
-	    	//Bottom-Up Merge Sort (iterative)
-	    	sortChars(array, aux);
+            //Bottom-Up Merge Sort (iterative)
+            sortChars(array, aux);
     	}
     }
     
@@ -250,25 +250,25 @@ public class MergeSort
     	boolean sorted = false;
     	if((low < high) && !sorted) 
     	{
-    		//Find middle point
-	    	int mid = low + (high - low) / 2;
+    	    //Find middle point
+    	    int mid = low + (high - low) / 2;
 	    	
-	    	//Sort first half
-	    	sortChars(array, aux, low, mid);
+    	    //Sort first half
+    	    sortChars(array, aux, low, mid);
 	    	
-	    	//Sort second half
-	    	sortChars(array, aux, mid + 1, high);
+    	    //Sort second half
+    	    sortChars(array, aux, mid + 1, high);
 	    	
-	    	//Stop if already sorted
-	    	if(array[mid] < array[mid + 1])
-	    	{
-	    		sorted = true;
-	    	}
-	    	else
-	    	{
-	    		//Merge the two sorted halves
-	    		merge(array, aux, low, mid, high);
-	    	}
+    	    //Stop if already sorted
+    	    if(array[mid] < array[mid + 1])
+            {
+    	        sorted = true;
+            }
+            else
+            {
+                //Merge the two sorted halves
+                merge(array, aux, low, mid, high);
+            }
     	}
     }
     
@@ -283,10 +283,10 @@ public class MergeSort
     	//Pass through array and merge subarrays of size 1, 2, 4, ...
     	for(int size = 1; size < array.length; size = size + size)
     	{
-    		for(int low = 0; low < array.length - size; low += size + size)
-    		{
-    			merge(array, aux, low, low + size - 1, Math.min(low + size + size - 1, array.length - 1));
-    		}
+    	    for(int low = 0; low < array.length - size; low += size + size)
+            {
+    	        merge(array, aux, low, low + size - 1, Math.min(low + size + size - 1, array.length - 1));
+    	    }
     	}
     }
     
@@ -304,7 +304,7 @@ public class MergeSort
     	//Copy elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
     	{
-    		aux[k] = array[k];
+    	    aux[k] = array[k];
     	}
     	
     	//Merge copied elements back into original array in sorted order
@@ -312,10 +312,10 @@ public class MergeSort
     	int j = mid + 1;
     	for(int k = low; k <= high; k++)
     	{
-    		if		(i > mid)			array[k] = aux[j++];
-    		else if (j > high)			array[k] = aux[i++];
-    		else if (aux[j] < aux[i])	array[k] = aux[j++];
-    		else 						array[k] = aux[i++];
+    	    if      (i > mid)           array[k] = aux[j++];
+    	    else if (j > high)          array[k] = aux[i++];
+    	    else if (aux[j] < aux[i])   array[k] = aux[j++];
+    	    else                        array[k] = aux[i++];
     	}	
     }
 }
