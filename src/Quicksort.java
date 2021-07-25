@@ -1,109 +1,107 @@
 import java.util.Random;
 /*************************************************************************
- *  Quicksort class.
+ *  {@code Quicksort} class.
  *
- *  @version 1.0 11/3/21
+ *  @version 25/7/21
  *
  *  @author Brian Whelan
  *
  *************************************************************************/
 public class Quicksort 
 {
-	/**
+    /**
      * Don't let anyone instantiate this class.
      */
-	private Quicksort() {}
+    private Quicksort() {}
 	
-	/**
-     * Sort an array of integers using quicksort in ascending order.
+    /**
+     * Sorts the specified array of integers in ascending order using quicksort.
      * 
-     * @param array: an unsorted array of integers.
+     * @param array the unsorted array of integers
      */
     public static void sortInts(int[] array)
     {
-    	if(array != null)
-    	{  		
-    		//Shuffle array to avoid worst case performance
-    		shuffleArray(array);
+        if(array != null)
+        {  		
+            //Shuffles array to avoid worst case performance
+            shuffleArray(array);
     		
-    		//Make call to recursive quicksort method
-    		sortInts(array, 0, array.length - 1);
-    	}
-    }
+            //Makes call to recursive quicksort method
+            sortInts(array, 0, array.length - 1);
+        }
+     }
     
     /**
-     * Shuffle an array to ensure it is not ordered for quicksort
+     * Shuffles the specified array of integers to ensure it is not ordered for quicksort.
      * 
-     * @param array: an unsorted array of integers.
+     * @param array the array of integers.
      */
     private static void shuffleArray(int[] array)
     {	
     	Random random = new Random();
-    	for(int i = 0; i < array.length; i++)
-    	{
-    		//Swap every element with another random element
-    		int indexToSwap = random.nextInt(array.length);
-    		int temp = array[i];
-    		array[i] = array[indexToSwap];
-    		array[indexToSwap] = temp;
-    	}
+        for(int i = 0; i < array.length; i++)
+        {
+            //Swaps every element with another random element
+            int indexToSwap = random.nextInt(array.length);
+            int temp = array[i];
+            array[i] = array[indexToSwap];
+            array[indexToSwap] = temp;
+        }
     }
     
     /**
-     * Recursively use quicksort to sort array by partitioning array around pivot.
+     * (Recursively) Uses quicksort to sort the specified array of integers by partitioning array around a pivot.
      * 
-     * @param array: an unsorted array of integers.
-     * @param low: start index of partition.
-     * @param high: end index of partition.
+     * @param array the unsorted array of integers
+     * @param low the start index of the partition
+     * @param high the end index of the partition
      */
     private static void sortInts(int[] array, int low, int high)
     {
-    	if(low < high)
-    	{
-    		int pivotPosition = partition(array, low, high);
+        if(low < high)
+        {
+    	    int pivotPosition = partition(array, low, high);
     		
-    		//Recursively sort elements before pivot
-    		sortInts(array, low, pivotPosition - 1);
-    		//Recursively sort elements after pivot
-    		sortInts(array, pivotPosition + 1, high);
+            //Recursively sort elements before pivot
+            sortInts(array, low, pivotPosition - 1);
+            //Recursively sort elements after pivot
+            sortInts(array, pivotPosition + 1, high);
     	}
     }
     
     /**
-     * Partition array by placing items smaller than pivot to the left 
-     * of the pivot and items larger than the pivot to the right.
+     * Partitions the specified array of integers by placing elements smaller than pivot to the left of the pivot and elements larger than the pivot to the right.
      * 
-     * @param array: an unsorted array of integers.
-     * @param low: start index of partition.
-     * @param high: end index of partition.
-     * @return integer representing index of pivot that array has 
-     * 		   been partitioned around.
+     * @param array the unsorted array of integers
+     * @param low the start index of partition
+     * @param high the end index of partition
+     * @return an integer representing index of pivot that array has been partitioned around
      */
     private static int partition(int[] array, int low, int high)
     {
-    	int i = low;
-    	int j = high + 1;
-    	int pivot = array[low];
-    	while(i < j)
-    	{
-    		//Find rightmost element smaller than pivot
-    		while((array[++i] < pivot) && (i < high)) {}
-    		//Find leftmost element larger than pivot
-    		while((pivot < array[--j]) && (j > low)) {}
+        int i = low;
+        int j = high + 1;
+        int pivot = array[low];
+        while(i < j)
+        {
+    	    //Find rightmost element smaller than pivot
+    	    while((array[++i] < pivot) && (i < high)) {}
+    	    //Find leftmost element larger than pivot
+    	    while((pivot < array[--j]) && (j > low)) {}
     		
-    		//Swap array[i] and array[j] if i < j
-    		if(i < j) 
-    		{    		
-	    		int temp = array[i];
-	    		array[i] = array[j];
-	    		array[j] = temp;
-    		}
-    	}
-    	//Swap pivot (array[low]) with array[j] to finish partitioning
-    	array[low] = array[j];
-    	array[j] = pivot;
+    	    //Swap array[i] and array[j] if i < j
+    	    if(i < j) 
+    	    {    		
+	    	    int temp = array[i];
+	    	    array[i] = array[j];
+	    	    array[j] = temp;
+    	    }
+        }
+        //Swap pivot (array[low]) with array[j] to finish partitioning
+        array[low] = array[j];
+        array[j] = pivot;
     	
-    	//Return index of pivot
+        //Return index of pivot
     	return j;
     }
     
