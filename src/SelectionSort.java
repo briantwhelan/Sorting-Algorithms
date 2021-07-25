@@ -1,105 +1,105 @@
 /*************************************************************************
- *  Selection Sort class.
+ *  {@code SelectionSort} class.
  *
- *  @version 1.0 11/3/21
+ *  @version 25/7/21
  *
  *  @author Brian Whelan
  *
  *************************************************************************/
 public class SelectionSort 
 {
-	/**
+    /**
      * Don't let anyone instantiate this class.
      */
-	private SelectionSort() {}
+    private SelectionSort() {}
 	
-	/**
-     * Sort an array of integers using selection sort in ascending order.
+    /**
+     * Sorts the specified array of integers in ascending order using selection sort.
      * 
-     * @param array: an unsorted array of integers.
+     * @param array the unsorted array of integers
      */
     public static void sortInts(int[] array)
     {
     	if(array != null)
     	{   		
-	    	//One by one move boundary of unsorted part of array
-	    	for(int i = 0; i < array.length - 1; i++)
-	    	{
-	    		//Find the minimum element in unsorted part of array
-	    		int min_idx = i;
-	    		for(int j = i + 1; j < array.length; j++)
-	    		{
-	    			if(array[j] < array[min_idx])
-	    			{
-	    				min_idx = j;
-	    			}
-	    		}
+            //Moves the boundary of unsorted part of array one by one
+            for(int i = 0; i < array.length - 1; i++)
+            {
+                //Finds the minimum element in the unsorted part of the array
+                int min_idx = i;
+                for(int j = i + 1; j < array.length; j++)
+                {
+                    if(array[j] < array[min_idx])
+                    {
+                        min_idx = j;
+                    }
+                }
 	
-	    		//Swap the found minimum element with the first element in unsorted part of array
-	    		int temp = array[min_idx];
-	    		array[min_idx] = array[i];
-	    		array[i] = temp;
-	    	}
+                //Swaps the found minimum element with the first element in the unsorted part of the array
+                int temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+            }
     	}
     }
     
-	/**
-     * Sort an array of doubles using selection sort in ascending order.
+    /**
+     * Sorts the specified array of doubles in ascending order using selection sort.
      * 
-     * @param array: an unsorted array of doubles.
+     * @param array the unsorted array of doubles
      */
-    public static void sortDoubles(double[] array)
+    public static void sortDoubless(double[] array)
     {
     	if(array != null)
     	{   		
-    		//One by one move boundary of unsorted part of array
-	    	for(int i = 0; i < array.length - 1; i++)
-	    	{
-	    		//Find the minimum element in unsorted part of array
-	    		int min_idx = i;
-	    		for(int j = i + 1; j < array.length; j++)
-	    		{
-	    			if(array[j] < array[min_idx])
-	    			{
-	    				min_idx = j;
-	    			}
-	    		}
+            //Moves the boundary of unsorted part of array one by one
+            for(int i = 0; i < array.length - 1; i++)
+            {
+                //Finds the minimum element in the unsorted part of the array
+                int min_idx = i;
+                for(int j = i + 1; j < array.length; j++)
+                {
+                    if(array[j] < array[min_idx])
+                    {
+                        min_idx = j;
+                    }
+                }
 	
-	    		//Swap the found minimum element with the first element in unsorted array
-	    		double temp = array[min_idx];
-	    		array[min_idx] = array[i];
-	    		array[i] = temp;
-	    	}
+                //Swaps the found minimum element with the first element in the unsorted part of the array
+                double temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+            }
     	}
     }
     
-	/**
-     * Sort an array of characters using selection sort in alphabetical order.
+    /**
+     * Sorts the specified array of characters in ascending order using selection sort.
      * 
-     * @param array: an unsorted array of characters.
+     * @param array the unsorted array of characters
      */
     public static void sortChars(char[] array)
     {
     	if(array != null)
     	{   		
-    		//One by one move boundary of unsorted part of array
-	    	for(int i = 0; i < array.length - 1; i++)
-	    	{
-	    		//Find the minimum element in unsorted part of array
-	    		int min_idx = i;
-	    		for(int j = i + 1; j < array.length; j++)
-	    		{
-	    			if(array[j] < array[min_idx])
-	    			{
-	    				min_idx = j;
-	    			}
-	    		}
-	    		
-	    		//Swap the found minimum element with the first element in unsorted array
-	    		char temp = array[min_idx];
-	    		array[min_idx] = array[i];
-	    		array[i] = temp;
-	    	}
+            //Moves the boundary of unsorted part of array one by one
+            for(int i = 0; i < array.length - 1; i++)
+            {
+                //Finds the minimum element in the unsorted part of the array
+                int min_idx = i;
+                for(int j = i + 1; j < array.length; j++)
+                {
+                    if(array[j] < array[min_idx])
+                    {
+                        min_idx = j;
+                    }
+                }
+	
+                //Swaps the found minimum element with the first element in the unsorted part of the array
+                char temp = array[min_idx];
+                array[min_idx] = array[i];
+                array[i] = temp;
+            }
     	}
     }
 }
