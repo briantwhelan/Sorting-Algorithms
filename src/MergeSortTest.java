@@ -1,93 +1,81 @@
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 /*************************************************************************
- *  Merge Sort test class.
+ *  {@code MergeSort} test class.
  *
- *  @version 1.0 11/3/21
+ *  @version 25/7/21
  *
  *  @author Brian Whelan
  *
  *************************************************************************/
 public class MergeSortTest 
 {
-	/**
-     * Test merge sort for integers
+    /**
+     * Test {@code sortInts(int[] array)}
      */
     @Test
-    public void testSortingInts()
+    public void testSortInts()
     {
-        //Test null array
     	int[] array = null;
     	MergeSort.sortInts(array);
-        assertArrayEquals("Testing merge sort for a null array", null, array);
+        assertArrayEquals("Testing sortInts(int[] array) - Sorting a null array", null, array);
         
-        //Test empty array
         array = new int[] {};
         MergeSort.sortInts(array);
-        assertArrayEquals("Testing merge sort for an empty array", new int[] {}, array);
+        assertArrayEquals("Testing sortInts(int[] array) - Sorting an empty array", new int[] {}, array);
         
-        //Test sorted array
         array = new int[] {5, 10, 15, 20};
         MergeSort.sortInts(array);
-        assertArrayEquals("Testing merge sort for a sorted array", new int[] {5, 10, 15, 20}, array);
+        assertArrayEquals("Testing sortInts(int[] array) - Sorting a sorted array", new int[] {5, 10, 15, 20}, array);
         
-        //Test unsorted array
         array = new int[] {20, 5, 15, 10};
         MergeSort.sortInts(array);
-        assertArrayEquals("Testing merge sort for an unsorted array", new int[] {5, 10, 15, 20}, array);
+        assertArrayEquals("Testing sortInts(int[] array) - Sorting an unsorted array", new int[] {5, 10, 15, 20}, array);
     }
     
-	/**
-     * Test merge sort for doubles
+    /**
+     * Test {@code sortDoubles(double[] array)}
      */
     @Test
-    public void testSortingDoubles()
+    public void testDoubles()
     {
-        //Test null array
-    	double[] array = null;
-    	MergeSort.sortDoubles(array);
-        assertArrayEquals("Testing merge sort for a null array", null, array, 0.0);
+        double[] array = null;
+        MergeSort.sortDoubles(array);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a null array", null, array, 0.0);
         
-        //Test empty array
         array = new double[] {};
         MergeSort.sortDoubles(array);
-        assertArrayEquals("Testing merge sort for an empty array", new double[] {}, array, 0.0);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an empty array", new double[] {}, array, 0.0);
         
-        //Test sorted array
         array = new double[] {5.0, 10.0, 15.0, 20.0};
         MergeSort.sortDoubles(array);
-        assertArrayEquals("Testing merge sort for a sorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a sorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
         
-        //Test unsorted array
         array = new double[] {20.0, 5.0, 15.0, 10.0};
         MergeSort.sortDoubles(array);
-        assertArrayEquals("Testing merge sort for an unsorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an unsorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
     }
     
-	/**
-     * Test merge sort for characters
+    /**
+     * Test {@code sortChars(char[] array)}
      */
     @Test
-    public void testSortingCharacters()
+    public void testChars()
     {
-        //Test null array
-    	char[] array = null;
-    	MergeSort.sortChars(array);
-        assertArrayEquals("Testing merge sort for a null array", null, array);
+        char[] array = null;
+        MergeSort.sortChars(array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting a null array", null, array);
         
-        //Test empty array
         array = new char[] {};
         MergeSort.sortChars(array);
-        assertArrayEquals("Testing merge sort for an empty array", new char[] {}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an empty array", new char[] {}, array);
         
-        //Test sorted array
         array = new char[] {'a', 'b', 'c', 'd', 'e'};
         MergeSort.sortChars(array);
-        assertArrayEquals("Testing merge sort for a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
         
-        //Test unsorted array
         array = new char[] {'b', 'r', 'i', 'a', 'n'};
         MergeSort.sortChars(array);
-        assertArrayEquals("Testing merge sort for an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
     }
 }
