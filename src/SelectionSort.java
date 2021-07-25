@@ -26,18 +26,18 @@ public class SelectionSort
             for(int i = 0; i < array.length - 1; i++)
             {
                 //Finds the minimum element in the unsorted part of the array
-                int min_idx = i;
+                int minIndex = i;
                 for(int j = i + 1; j < array.length; j++)
                 {
-                    if(array[j] < array[min_idx])
+                    if(array[j] < array[minIndex])
                     {
-                        min_idx = j;
+                        minIndex = j;
                     }
                 }
 	
                 //Swaps the found minimum element with the first element in the unsorted part of the array
-                int temp = array[min_idx];
-                array[min_idx] = array[i];
+                int temp = array[minIndex];
+                array[minIndex] = array[i];
                 array[i] = temp;
             }
     	}
@@ -56,18 +56,18 @@ public class SelectionSort
             for(int i = 0; i < array.length - 1; i++)
             {
                 //Finds the minimum element in the unsorted part of the array
-                int min_idx = i;
+                int minIndex = i;
                 for(int j = i + 1; j < array.length; j++)
                 {
-                    if(array[j] < array[min_idx])
+                    if(array[j] < array[minIndex])
                     {
-                        min_idx = j;
+                        minIndex = j;
                     }
                 }
 	
                 //Swaps the found minimum element with the first element in the unsorted part of the array
-                double temp = array[min_idx];
-                array[min_idx] = array[i];
+                double temp = array[minIndex];
+                array[minIndex] = array[i];
                 array[i] = temp;
             }
     	}
@@ -86,18 +86,18 @@ public class SelectionSort
             for(int i = 0; i < array.length - 1; i++)
             {
                 //Finds the minimum element in the unsorted part of the array
-                int min_idx = i;
+                int minIndex = i;
                 for(int j = i + 1; j < array.length; j++)
                 {
-                    if(array[j] < array[min_idx])
+                    if(array[j] < array[minIndex])
                     {
-                        min_idx = j;
+                        minIndex = j;
                     }
                 }
 	
                 //Swaps the found minimum element with the first element in the unsorted part of the array
-                char temp = array[min_idx];
-                array[min_idx] = array[i];
+                char temp = array[minIndex];
+                array[minIndex] = array[i];
                 array[i] = temp;
             }
     	}

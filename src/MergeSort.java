@@ -41,7 +41,7 @@ public class MergeSort
      * @param low the start index of {@code array}
      * @param high the end index of {@code array}
      */
-    private static void sortInts(int array[], int aux[], int low, int high)
+    private static void sortInts(int[] array, int[] aux, int low, int high)
     {
     	boolean sorted = false;
     	if((low < high) && !sorted) 
@@ -95,7 +95,7 @@ public class MergeSort
      * @param mid the end index of the first subarray (mid + 1 is the start index of the second subarray)
      * @param high the end index of the second subarray
      */
-    private static void merge(int array[], int aux[], int low, int mid, int high)
+    private static void merge(int[] array, int[] aux, int low, int mid, int high)
     {
     	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
@@ -128,7 +128,7 @@ public class MergeSort
             double[] aux = new double[array.length];
 	    	
             //Top-Down Merge Sort (recursive)
-            //sortInts(array, aux, 0, array.length - 1);
+            //sortDoubles(array, aux, 0, array.length - 1);
 	    	
             //Bottom-Up Merge Sort (iterative)
             sortDoubles(array, aux);
@@ -143,7 +143,7 @@ public class MergeSort
      * @param low the start index of {@code array}
      * @param high the end index of {@code array}
      */
-    private static void sortDoubles(double array[], double aux[], int low, int high)
+    private static void sortDoubles(double[] array, double[] aux, int low, int high)
     {
     	boolean sorted = false;
     	if((low < high) && !sorted) 
@@ -197,7 +197,7 @@ public class MergeSort
      * @param mid the end index of the first subarray (mid + 1 is the start index of the second subarray)
      * @param high the end index of the second subarray
      */
-    private static void merge(double array[], double aux[], int low, int mid, int high)
+    private static void merge(double[] array, double[] aux, int low, int mid, int high)
     {
     	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
@@ -230,7 +230,7 @@ public class MergeSort
             char[] aux = new char[array.length];
 	    	
             //Top-Down Merge Sort (recursive)
-            //sortInts(array, aux, 0, array.length - 1);
+            //sortChars(array, aux, 0, array.length - 1);
 	    	
             //Bottom-Up Merge Sort (iterative)
             sortChars(array, aux);
@@ -245,7 +245,7 @@ public class MergeSort
      * @param low the start index of {@code array}
      * @param high the end index of {@code array}
      */
-    private static void sortChars(char array[], char aux[], int low, int high)
+    private static void sortChars(char[] array, char[] aux, int low, int high)
     {
     	boolean sorted = false;
     	if((low < high) && !sorted) 
@@ -299,7 +299,7 @@ public class MergeSort
      * @param mid the end index of the first subarray (mid + 1 is the start index of the second subarray)
      * @param high the end index of the second subarray
      */
-    private static void merge(char array[], char aux[], int low, int mid, int high)
+    private static void merge(char[] array, char[] aux, int low, int mid, int high)
     {
     	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
