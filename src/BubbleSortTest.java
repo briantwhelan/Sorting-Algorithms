@@ -64,18 +64,18 @@ public class BubbleSortTest
     {
         char[] array = null;
     	BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(int[] array) - Sorting a null array", null, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting a null array", null, array);
         
         array = new char[] {};
         BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(int[] array) - Sorting an empty array", new char[] {}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an empty array", new char[] {}, array);
         
         array = new char[] {'a', 'b', 'c', 'd', 'e'};
         BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(int[] array) - Sorting a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
         
         array = new char[] {'b', 'r', 'i', 'a', 'n'};
         BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(int[] array) - Sorting an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
     }
 }
