@@ -9,7 +9,7 @@ import java.util.Random;
  *************************************************************************/
 public class GenericSortingAlgorithms<T extends Comparable<T>>
 {	
-	/**
+    /**
      * Creates a {@code GenericSortingAlgorithms} object to sort arrays using various algorithms.
      */
     public GenericSortingAlgorithms() {}
