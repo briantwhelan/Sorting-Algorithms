@@ -11,7 +11,7 @@ public class InsertionSort
     /**
      * Don't let anyone instantiate this class.
      */
-	private InsertionSort() {}
+    private InsertionSort() {}
 	
     /**
      * Sorts the specified array of integers in ascending order using insertion sort.
@@ -34,7 +34,7 @@ public class InsertionSort
     	            j--;
     	        }
     	        array[j] = index;
-	        }
+            }
     	}
     }
     
@@ -59,7 +59,7 @@ public class InsertionSort
     	            j--;
     	        }
     	        array[j] = index;
-	        }
+            }
     	}
     }
     
@@ -84,7 +84,7 @@ public class InsertionSort
     	            j--;
     	        }
     	        array[j] = index;
-	        }
-    	}
+            }
+        }
     }
 }
