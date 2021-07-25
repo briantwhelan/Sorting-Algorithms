@@ -1,89 +1,89 @@
 /*************************************************************************
- *  Insertion Sort class.
+ *  {@code InsertionSort} class.
  *
- *  @version 1.0 11/3/21
+ *  @version 25/7/21
  *
  *  @author Brian Whelan
  *
  *************************************************************************/
 public class InsertionSort 
 {
-	/**
+    /**
      * Don't let anyone instantiate this class.
      */
 	private InsertionSort() {}
 	
-	/**
-     * Sort an array of integers using insertion sort in ascending order.
+    /**
+     * Sorts the specified array of integers in ascending order using insertion sort.
      * 
-     * @param array: an unsorted array of integers.
+     * @param array the unsorted array of integers
      */
     public static void sortInts(int[] array)
     {
-    	if(array != null)
-    	{ 		
-    		//Insert each element into correct position of sorted part of array
-	    	for(int i = 1; i < array.length; i++)
-	    	{   	
-	    		//Swap until j reaches start of array or previous element is smaller
-	    		int j = i;
-	    		int index = array[i];
-	    		while((j > 0) && (array[j - 1] > index))
-	    		{
-	    			array[j] = array[j - 1];
-	    			j--;
-	    		}
-	    		array[j] = index;
+        if(array != null)
+        { 		
+    	    //Inserts each element into correct position of sorted part of array
+	        for(int i = 1; i < array.length; i++)
+	        {   	
+	    	    //Swaps until j reaches start of array or previous element is smaller
+	    	    int j = i;
+	    	    int index = array[i];
+	    	    while((j > 0) && (array[j - 1] > index))
+	    	    {
+	    	        array[j] = array[j - 1];
+	    	        j--;
+	    	    }
+	    	    array[j] = index;
 	    	}
-    	}
+	    }
     }
     
-	/**
-     * Sort an array of doubles using insertion sort in ascending order.
+    /**
+     * Sorts the specified array of doubles in ascending order using bubble sort.
      * 
-     * @param array: an unsorted array of doubles.
+     * @param array the unsorted array of doubles
      */
     public static void sortDoubles(double[] array)
     {
     	if(array != null)
     	{ 		
-    		//Insert each element into correct position of sorted part of array
-	    	for(int i = 1; i < array.length; i++)
-	    	{   	
-	    		//Swap until j reaches start of array or previous element is smaller
-	    		int j = i;
-	    		double index = array[i];
-	    		while((j > 0) && (array[j - 1] > index))
-	    		{
-	    			array[j] = array[j - 1];
-	    			j--;
+    	    //Inserts each element into correct position of sorted part of array
+    	    for(int i = 1; i < array.length; i++)
+    	    {   	
+    	        //Swaps until j reaches start of array or previous element is smaller
+    	        int j = i;
+    	        double index = array[i];
+    	        while((j > 0) && (array[j - 1] > index))
+    	        {
+    	            array[j] = array[j - 1];
+    	            j--;
 	    		}
-	    		array[j] = index;
+    	        array[j] = index;
 	    	}
     	}
     }
     
-	/**
-     * Sort an array of characters using insertion sort in alphabetical order.
+    /**
+     * Sorts the specified array of characters in ascending order using bubble sort.
      * 
-     * @param array: an unsorted array of characters.
+     * @param array the unsorted array of characters
      */
     public static void sortChars(char[] array)
     {
     	if(array != null)
     	{ 		
-    		//Insert each element into correct position of sorted part of array
-	    	for(int i = 1; i < array.length; i++)
+    	    //Inserts each element into correct position of sorted part of array
+    	    for(int i = 1; i < array.length; i++)
 	    	{   	
-	    		//Swap until j reaches start of array or previous element is smaller
-	    		int j = i;
-	    		char index = array[i];
-	    		while((j > 0) && (array[j - 1] > index))
+    	        //Swaps until j reaches start of array or previous element is smaller
+    	        int j = i;
+    	        char index = array[i];
+    	        while((j > 0) && (array[j - 1] > index))
 	    		{
-	    			array[j] = array[j - 1];
-	    			j--;
+    	            array[j] = array[j - 1];
+    	            j--;
 	    		}
-	    		array[j] = index;
+    	        array[j] = index;
 	    	}
     	}
     }
