@@ -1,7 +1,7 @@
 /*************************************************************************
  *  {@code BubbleSort} class.
  *
- *  @version 24/7/21
+ *  @version 25/7/21
  *
  *  @author Brian Whelan
  *
@@ -30,7 +30,7 @@ public class BubbleSort
     	    	{
     	    	    if(array[j] > array[j + 1]) 
     	    	    {
-    	    	        //Array is not sorted as swap was needed
+    	    	        //Array is not sorted as swap is needed
     	    	        sorted = false;
 
     	    	        //Swaps array[j + 1] and array[j] 
@@ -60,7 +60,7 @@ public class BubbleSort
     	    	{
     	    	    if(array[j] > array[j + 1]) 
     	    	    {
-    	    	        //Array is not sorted as swap was needed
+    	    	        //Array is not sorted as swap is needed
     	    	        sorted = false;
 
     	    	        //Swaps array[j + 1] and array[j] 
@@ -90,7 +90,7 @@ public class BubbleSort
     	    	{
     	    	    if(array[j] > array[j + 1]) 
     	    	    {
-    	    	        //Array is not sorted as swap was needed
+    	    	        //Array is not sorted as swap is needed
     	    	        sorted = false;
 
     	    	        //Swaps array[j + 1] and array[j] 
