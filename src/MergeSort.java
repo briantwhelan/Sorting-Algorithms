@@ -57,14 +57,14 @@ public class MergeSort
 	    	
     	    //Stop if already sorted
     	    if(array[mid] < array[mid + 1])
-	        {
+            {
     	        sorted = true;
             }
-	        else
-	        {
-	    	    //Merge the two sorted halves
-	    	    merge(array, aux, low, mid, high);
-	        }
+            else
+            {
+                //Merge the two sorted halves
+                merge(array, aux, low, mid, high);
+            }
     	}
     }
     
