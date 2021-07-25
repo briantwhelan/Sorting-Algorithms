@@ -46,23 +46,23 @@ public class MergeSort
     	boolean sorted = false;
     	if((low < high) && !sorted) 
     	{
-    	    //Find middle point
+    	    //Finds middle point
     	    int mid = low + (high - low) / 2;
 	    	
-    	    //Sort first half
+    	    //Sorts first half
     	    sortInts(array, aux, low, mid);
 	    	
-    	    //Sort second half
+    	    //Sorts second half
     	    sortInts(array, aux, mid + 1, high);
 	    	
-    	    //Stop if already sorted
+    	    //Stops if already sorted
     	    if(array[mid] < array[mid + 1])
             {
     	        sorted = true;
             }
             else
             {
-                //Merge the two sorted halves
+                //Merges the two sorted halves
                 merge(array, aux, low, mid, high);
             }
     	}
@@ -76,7 +76,7 @@ public class MergeSort
      */
     private static void sortInts(int[] array, int[] aux)
     {
-    	//Pass through array and merge subarrays of size 1, 2, 4, ...
+    	//Passes through array and merges subarrays of size 1, 2, 4, ...
     	for(int size = 1; size < array.length; size = size + size)
     	{
     	    for(int low = 0; low < array.length - size; low += size + size)
@@ -97,13 +97,13 @@ public class MergeSort
      */
     private static void merge(int array[], int aux[], int low, int mid, int high)
     {
-    	//Copy elements from original array into auxiliary array
+    	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
     	{
     	    aux[k] = array[k];
     	}
     	
-    	//Merge copied elements back into original array in sorted order
+    	//Merges copied elements back into original array in sorted order
     	int i = low;
     	int j = mid + 1;
     	for(int k = low; k <= high; k++)
@@ -116,7 +116,7 @@ public class MergeSort
     }
     
     /**
-     * Sorts the specified array of doubles in ascending order using bubble sort.
+     * Sorts the specified array of doubles in ascending order using merge sort.
      * 
      * @param array the unsorted array of doubles
      */
@@ -148,23 +148,23 @@ public class MergeSort
     	boolean sorted = false;
     	if((low < high) && !sorted) 
     	{
-    	    //Find middle point
+    	    //Finds middle point
     	    int mid = low + (high - low) / 2;
 	    	
-    	    //Sort first half
+    	    //Sorts first half
     	    sortDoubles(array, aux, low, mid);
 	    	
-    	    //Sort second half
+    	    //Sorts second half
     	    sortDoubles(array, aux, mid + 1, high);
 	    	
-    	    //Stop if already sorted
+    	    //Stops if already sorted
     	    if(array[mid] < array[mid + 1])
             {
     	        sorted = true;
             }
             else
             {
-                //Merge the two sorted halves
+                //Merges the two sorted halves
                 merge(array, aux, low, mid, high);
             }
     	}
@@ -178,7 +178,7 @@ public class MergeSort
      */
     private static void sortDoubles(double[] array, double[] aux)
     {
-    	//Pass through array and merge subarrays of size 1, 2, 4, ...
+    	//Passes through array and merges subarrays of size 1, 2, 4, ...
     	for(int size = 1; size < array.length; size = size + size)
     	{
     	    for(int low = 0; low < array.length - size; low += size + size)
@@ -199,13 +199,13 @@ public class MergeSort
      */
     private static void merge(double array[], double aux[], int low, int mid, int high)
     {
-    	//Copy elements from original array into auxiliary array
+    	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
     	{
     	    aux[k] = array[k];
     	}
     	
-    	//Merge copied elements back into original array in sorted order
+    	//Merges copied elements back into original array in sorted order
     	int i = low;
     	int j = mid + 1;
     	for(int k = low; k <= high; k++)
@@ -218,7 +218,7 @@ public class MergeSort
     }
     
     /**
-     * Sorts the specified array of characters in ascending order using bubble sort.
+     * Sorts the specified array of characters in alphabetical order using merge sort.
      * 
      * @param array the unsorted array of characters
      */
@@ -250,23 +250,23 @@ public class MergeSort
     	boolean sorted = false;
     	if((low < high) && !sorted) 
     	{
-    	    //Find middle point
+    	    //Finds middle point
     	    int mid = low + (high - low) / 2;
 	    	
-    	    //Sort first half
+    	    //Sorts first half
     	    sortChars(array, aux, low, mid);
 	    	
-    	    //Sort second half
+    	    //Sorts second half
     	    sortChars(array, aux, mid + 1, high);
 	    	
-    	    //Stop if already sorted
+    	    //Stops if already sorted
     	    if(array[mid] < array[mid + 1])
             {
     	        sorted = true;
             }
             else
             {
-                //Merge the two sorted halves
+                //Merges the two sorted halves
                 merge(array, aux, low, mid, high);
             }
     	}
@@ -280,7 +280,7 @@ public class MergeSort
      */
     private static void sortChars(char[] array, char[] aux)
     {
-    	//Pass through array and merge subarrays of size 1, 2, 4, ...
+    	//Passes through array and merge subarrays of size 1, 2, 4, ...
     	for(int size = 1; size < array.length; size = size + size)
     	{
     	    for(int low = 0; low < array.length - size; low += size + size)
@@ -301,13 +301,13 @@ public class MergeSort
      */
     private static void merge(char array[], char aux[], int low, int mid, int high)
     {
-    	//Copy elements from original array into auxiliary array
+    	//Copys elements from original array into auxiliary array
     	for(int k = low; k <= high; k++)
     	{
     	    aux[k] = array[k];
     	}
     	
-    	//Merge copied elements back into original array in sorted order
+    	//Merges copied elements back into original array in sorted order
     	int i = low;
     	int j = mid + 1;
     	for(int k = low; k <= high; k++)

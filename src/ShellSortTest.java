@@ -48,7 +48,7 @@ public class ShellSortTest
         assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an empty array", new double[] {}, array, 0.0);
         
         array = new double[] {5.0, 10.0, 15.0, 20.0};
-        InsertionSort.sortDoubles(array);
+        ShellSort.sortDoubles(array);
         assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a sorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
         
         array = new double[] {20.0, 5.0, 15.0, 10.0};

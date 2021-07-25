@@ -74,7 +74,7 @@ public class BubbleSort
     }
     
     /**
-     * Sorts the specified array of characters in ascending order using bubble sort.
+     * Sorts the specified array of characters in alphabetical order using bubble sort.
      * 
      * @param array the unsorted array of characters
      */

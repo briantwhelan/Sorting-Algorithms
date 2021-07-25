@@ -39,7 +39,7 @@ public class InsertionSort
     }
     
     /**
-     * Sorts the specified array of doubles in ascending order using bubble sort.
+     * Sorts the specified array of doubles in ascending order using insertion sort.
      * 
      * @param array the unsorted array of doubles
      */
@@ -64,7 +64,7 @@ public class InsertionSort
     }
     
     /**
-     * Sorts the specified array of characters in ascending order using bubble sort.
+     * Sorts the specified array of characters in alphabetical order using insertion sort.
      * 
      * @param array the unsorted array of characters
      */

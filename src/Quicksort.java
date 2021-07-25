@@ -62,9 +62,9 @@ public class Quicksort
         {
     	    int pivotPosition = partition(array, low, high);
     		
-            //Recursively sort elements before pivot
+            //Recursively sorts elements before pivot
             sortInts(array, low, pivotPosition - 1);
-            //Recursively sort elements after pivot
+            //Recursively sorts elements after pivot
             sortInts(array, pivotPosition + 1, high);
     	}
     }
@@ -84,12 +84,12 @@ public class Quicksort
         int pivot = array[low];
         while(i < j)
         {
-    	    //Find rightmost element smaller than pivot
+    	    //Finds rightmost element smaller than pivot
     	    while((array[++i] < pivot) && (i < high)) {}
-    	    //Find leftmost element larger than pivot
+    	    //Finds leftmost element larger than pivot
     	    while((pivot < array[--j]) && (j > low)) {}
     		
-    	    //Swap array[i] and array[j] if i < j
+    	    //Swaps array[i] and array[j] if i < j
     	    if(i < j) 
     	    {    		
 	    	    int temp = array[i];
@@ -97,11 +97,11 @@ public class Quicksort
 	    	    array[j] = temp;
     	    }
         }
-        //Swap pivot (array[low]) with array[j] to finish partitioning
+        //Swaps pivot (array[low]) with array[j] to finish partitioning
         array[low] = array[j];
         array[j] = pivot;
     	
-        //Return index of pivot
+        //Returns index of pivot
     	return j;
     }
     
@@ -153,9 +153,9 @@ public class Quicksort
         {
     	    int pivotPosition = partition(array, low, high);
     		
-            //Recursively sort elements before pivot
+            //Recursively sorts elements before pivot
             sortDoubles(array, low, pivotPosition - 1);
-            //Recursively sort elements after pivot
+            //Recursively sorts elements after pivot
             sortDoubles(array, pivotPosition + 1, high);
     	}
     }
@@ -175,12 +175,12 @@ public class Quicksort
         double pivot = array[low];
         while(i < j)
         {
-    	    //Find rightmost element smaller than pivot
+    	    //Finds rightmost element smaller than pivot
     	    while((array[++i] < pivot) && (i < high)) {}
-    	    //Find leftmost element larger than pivot
+    	    //Finds leftmost element larger than pivot
     	    while((pivot < array[--j]) && (j > low)) {}
     		
-    	    //Swap array[i] and array[j] if i < j
+    	    //Swaps array[i] and array[j] if i < j
     	    if(i < j) 
     	    {    		
 	    	    double temp = array[i];
@@ -188,11 +188,11 @@ public class Quicksort
 	    	    array[j] = temp;
     	    }
         }
-        //Swap pivot (array[low]) with array[j] to finish partitioning
+        //Swaps pivot (array[low]) with array[j] to finish partitioning
         array[low] = array[j];
         array[j] = pivot;
     	
-        //Return index of pivot
+        //Returns index of pivot
     	return j;
     }
     
@@ -244,9 +244,9 @@ public class Quicksort
         {
     	    int pivotPosition = partition(array, low, high);
     		
-            //Recursively sort elements before pivot
+            //Recursively sorts elements before pivot
             sortChars(array, low, pivotPosition - 1);
-            //Recursively sort elements after pivot
+            //Recursively sorts elements after pivot
             sortChars(array, pivotPosition + 1, high);
     	}
     }
@@ -266,12 +266,12 @@ public class Quicksort
         char pivot = array[low];
         while(i < j)
         {
-    	    //Find rightmost element smaller than pivot
+    	    //Finds rightmost element smaller than pivot
     	    while((array[++i] < pivot) && (i < high)) {}
-    	    //Find leftmost element larger than pivot
+    	    //Finds leftmost element larger than pivot
     	    while((pivot < array[--j]) && (j > low)) {}
     		
-    	    //Swap array[i] and array[j] if i < j
+    	    //Swaps array[i] and array[j] if i < j
     	    if(i < j) 
     	    {    		
 	    	    char temp = array[i];
@@ -279,11 +279,11 @@ public class Quicksort
 	    	    array[j] = temp;
     	    }
         }
-        //Swap pivot (array[low]) with array[j] to finish partitioning
+        //Swaps pivot (array[low]) with array[j] to finish partitioning
         array[low] = array[j];
         array[j] = pivot;
     	
-        //Return index of pivot
+        //Returns index of pivot
     	return j;
     }	
 }

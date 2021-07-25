@@ -48,7 +48,7 @@ public class SelectionSort
      * 
      * @param array the unsorted array of doubles
      */
-    public static void sortDoubless(double[] array)
+    public static void sortDoubles(double[] array)
     {
     	if(array != null)
     	{   		
@@ -74,7 +74,7 @@ public class SelectionSort
     }
     
     /**
-     * Sorts the specified array of characters in ascending order using selection sort.
+     * Sorts the specified array of characters in alphabetical order using selection sort.
      * 
      * @param array the unsorted array of characters
      */
