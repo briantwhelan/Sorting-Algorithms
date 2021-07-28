@@ -3,7 +3,7 @@ import static org.junit.Assert.assertArrayEquals;
 /*************************************************************************
  *  {@code BubbleSort} test class.
  *
- *  @version 25/7/21
+ *  @version 28/7/21
  *
  *  @author Brian Whelan
  *
@@ -11,26 +11,26 @@ import static org.junit.Assert.assertArrayEquals;
 public class BubbleSortTest 
 {
     /**
-     * Test {@code sortInts(int[] array)}
+     * Test {@code sort(Comparable[] array)}
      */
     @Test
-    public void testSortInts()
+    public void testSort()
     {
-    	int[] array = null;
-    	BubbleSort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting a null array", null, array);
+    	Integer[] array = null;
+    	BubbleSort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting a null array", null, array);
         
-        array = new int[] {};
-        BubbleSort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting an empty array", new int[] {}, array);
+        array = new Integer[] {};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting an empty array", new Integer[] {}, array);
         
-        array = new int[] {5, 10, 15, 20};
-        BubbleSort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting a sorted array", new int[] {5, 10, 15, 20}, array);
+        array = new Integer[] {5, 10, 15, 20};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting a sorted array", new Integer[] {5, 10, 15, 20}, array);
         
-        array = new int[] {20, 5, 15, 10};
-        BubbleSort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting an unsorted array", new int[] {5, 10, 15, 20}, array);
+        array = new Integer[] {20, 5, 15, 10};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting an unsorted array", new Integer[] {5, 10, 15, 20}, array);
     }
     
     /**
@@ -39,21 +39,21 @@ public class BubbleSortTest
     @Test
     public void testDoubles()
     {
-        double[] array = null;
-    	BubbleSort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a null array", null, array, 0.0);
+        Double[] array = null;
+    	BubbleSort.sort(array);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a null array", null, array);
         
-        array = new double[] {};
-        BubbleSort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an empty array", new double[] {}, array, 0.0);
+        array = new Double[] {};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an empty array", new Double[] {}, array);
         
-        array = new double[] {5.0, 10.0, 15.0, 20.0};
-        BubbleSort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a sorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
+        array = new Double[] {5.0, 10.0, 15.0, 20.0};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a sorted array", new Double[] {5.0, 10.0, 15.0, 20.0}, array);
         
-        array = new double[] {20.0, 5.0, 15.0, 10.0};
-        BubbleSort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an unsorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
+        array = new Double[] {20.0, 5.0, 15.0, 10.0};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an unsorted array", new Double[] {5.0, 10.0, 15.0, 20.0}, array);
     }
     
     /**
@@ -62,20 +62,21 @@ public class BubbleSortTest
     @Test
     public void testChars()
     {
-        char[] array = null;
-    	BubbleSort.sortChars(array);
+        Character[] array = null;
+    	BubbleSort.sort(array);
         assertArrayEquals("Testing sortChars(char[] array) - Sorting a null array", null, array);
         
-        array = new char[] {};
-        BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting an empty array", new char[] {}, array);
+        array = new Character[] {};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an empty array", new Character[] {}, array);
         
-        array = new char[] {'a', 'b', 'c', 'd', 'e'};
-        BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
+        array = new Character[] {'a', 'b', 'c', 'd', 'e'};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting a sorted array", new Character[] {'a', 'b', 'c', 'd', 'e'}, array);
         
-        array = new char[] {'b', 'r', 'i', 'a', 'n'};
-        BubbleSort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
+        array = new Character[] {'b', 'r', 'i', 'a', 'n'};
+        BubbleSort.sort(array);
+        assertArrayEquals("Testing sortChars(char[] array) - Sorting an unsorted array", new Character[] {'a', 'b', 'i', 'n', 'r'}, array);
     }
+
 }

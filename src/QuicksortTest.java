@@ -3,7 +3,7 @@ import static org.junit.Assert.assertArrayEquals;
 /*************************************************************************
  *  {@code Quicksort} test class.
  *
- *  @version 25/7/21
+ *  @version 28/7/21
  *
  *  @author Brian Whelan
  *
@@ -11,71 +11,25 @@ import static org.junit.Assert.assertArrayEquals;
 public class QuicksortTest 
 {
     /**
-     * Test {@code sortInts(int[] array)}
+     * Test {@code sort(Comparable[] array)}
      */
     @Test
-    public void testSortInts()
+    public void testSort()
     {
-    	int[] array = null;
-    	Quicksort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting a null array", null, array);
+    	Integer[] array = null;
+    	Quicksort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting a null array", null, array);
         
-        array = new int[] {};
-        Quicksort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting an empty array", new int[] {}, array);
+        array = new Integer[] {};
+        Quicksort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting an empty array", new Integer[] {}, array);
         
-        array = new int[] {5, 10, 15, 20};
-        Quicksort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting a sorted array", new int[] {5, 10, 15, 20}, array);
+        array = new Integer[] {5, 10, 15, 20};
+        Quicksort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting a sorted array", new Integer[] {5, 10, 15, 20}, array);
         
-        array = new int[] {20, 5, 15, 10};
-        Quicksort.sortInts(array);
-        assertArrayEquals("Testing sortInts(int[] array) - Sorting an unsorted array", new int[] {5, 10, 15, 20}, array);
-    }
-    
-    /**
-     * Test {@code sortDoubles(double[] array)}
-     */
-    @Test
-    public void testDoubles()
-    {
-        double[] array = null;
-        Quicksort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a null array", null, array, 0.0);
-        
-        array = new double[] {};
-        Quicksort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an empty array", new double[] {}, array, 0.0);
-        
-        array = new double[] {5.0, 10.0, 15.0, 20.0};
-        Quicksort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting a sorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
-        
-        array = new double[] {20.0, 5.0, 15.0, 10.0};
-        Quicksort.sortDoubles(array);
-        assertArrayEquals("Testing sortDoubles(double[] array) - Sorting an unsorted array", new double[] {5.0, 10.0, 15.0, 20.0}, array, 0.0);
-    }
-    
-    /**
-     * Test {@code sortChars(char[] array)}
-     */
-    @Test
-    public void testChars()
-    {
-        char[] array = null;
-        Quicksort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting a null array", null, array);
-        
-        array = new char[] {};
-        Quicksort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting an empty array", new char[] {}, array);
-        
-        array = new char[] {'a', 'b', 'c', 'd', 'e'};
-        Quicksort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting a sorted array", new char[] {'a', 'b', 'c', 'd', 'e'}, array);
-        
-        array = new char[] {'b', 'r', 'i', 'a', 'n'};
-        Quicksort.sortChars(array);
-        assertArrayEquals("Testing sortChars(char[] array) - Sorting an unsorted array", new char[] {'a', 'b', 'i', 'n', 'r'}, array);
+        array = new Integer[] {20, 5, 15, 10};
+        Quicksort.sort(array);
+        assertArrayEquals("Testing sort(Comparable[] array) - Sorting an unsorted array", new Integer[] {5, 10, 15, 20}, array);
     }
 }
