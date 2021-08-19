@@ -86,7 +86,7 @@ public class CompareSortingAlgorithms
 											  + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											  + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											  + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("HeapSort"))
         {
             long start = System.nanoTime();
@@ -125,7 +125,7 @@ public class CompareSortingAlgorithms
 											+ "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											+ "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											+ "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("InsertionSort"))
         {
             long start = System.nanoTime();
@@ -164,7 +164,7 @@ public class CompareSortingAlgorithms
 											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("MergeSort"))
         {
             long start = System.nanoTime();
@@ -203,7 +203,7 @@ public class CompareSortingAlgorithms
 											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("Quicksort"))
         {
             long start = System.nanoTime();
@@ -242,7 +242,7 @@ public class CompareSortingAlgorithms
 											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("SelectionSort"))
         {
             long start = System.nanoTime();
@@ -281,7 +281,7 @@ public class CompareSortingAlgorithms
 											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else if(sortingMethod.equals("ShellSort"))
         {
             long start = System.nanoTime();
@@ -320,7 +320,7 @@ public class CompareSortingAlgorithms
 											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-	    }
+        }
         else
         {
              System.out.println("Invalid sort method.");
