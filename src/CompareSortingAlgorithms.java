@@ -81,11 +81,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("BubbleSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											  + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											  + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											  + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											  + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											  + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                              + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                              + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                              + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                              + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                              + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("HeapSort"))
         {
@@ -120,11 +120,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("HeapSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											+ "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											+ "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											+ "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											+ "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											+ "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                            + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                            + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                            + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                            + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                            + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("InsertionSort"))
         {
@@ -159,11 +159,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("InsertionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											     + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											     + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                                 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                                 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                                 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                                 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                                 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("MergeSort"))
         {
@@ -198,11 +198,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("MergeSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                             + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                             + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                             + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                             + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                             + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("Quicksort"))
         {
@@ -237,11 +237,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("Quicksort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                             + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                             + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                             + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                             + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                             + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("SelectionSort"))
         {
@@ -276,11 +276,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("SelectionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											     + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											     + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                                 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                                 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                                 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                                 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                                 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else if(sortingMethod.equals("ShellSort"))
         {
@@ -315,11 +315,11 @@ public class CompareSortingAlgorithms
             long timeElapsed6 = (end - start);
 			
             System.out.println("ShellSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+                                             + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+                                             + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+                                             + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+                                             + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+                                             + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
         }
         else
         {
