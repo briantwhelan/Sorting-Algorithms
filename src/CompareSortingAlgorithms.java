@@ -30,57 +30,57 @@ public class CompareSortingAlgorithms
      */
     public static void runSortingTests(String sortingMethod)
     {
-	    String numbers1000Path = "./numbers1000.txt";
-	    Double[] numbers1000 = readFile(numbers1000Path, 1000);
+        String numbers1000Path = "./numbers1000.txt";
+        Double[] numbers1000 = readFile(numbers1000Path, 1000);
 		
-	    String numbers10000Path = "./numbers10000.txt";
-	    Double[] numbers10000 = readFile(numbers10000Path, 10000);
+        String numbers10000Path = "./numbers10000.txt";
+        Double[] numbers10000 = readFile(numbers10000Path, 10000);
 	
-	    String numbers1000DuplicatesPath = "./numbers1000Duplicates.txt";
-	    Double[] numbers1000Duplicates = readFile(numbers1000DuplicatesPath, 1000);
+        String numbers1000DuplicatesPath = "./numbers1000Duplicates.txt";
+        Double[] numbers1000Duplicates = readFile(numbers1000DuplicatesPath, 1000);
 		
-	    String numbersNearlyOrdered1000Path = "./numbersNearlyOrdered1000.txt";
-	    Double[] numbersNearlyOrdered1000 = readFile(numbersNearlyOrdered1000Path, 1000);
+        String numbersNearlyOrdered1000Path = "./numbersNearlyOrdered1000.txt";
+        Double[] numbersNearlyOrdered1000 = readFile(numbersNearlyOrdered1000Path, 1000);
 		
-	    String numbersReverse1000Path = "./numbersReverse1000.txt";
-	    Double[] numbersReverse1000 = readFile(numbersReverse1000Path, 1000);
+        String numbersReverse1000Path = "./numbersReverse1000.txt";
+        Double[] numbersReverse1000 = readFile(numbersReverse1000Path, 1000);
 		
-	    String numbersSorted1000Path = "./numbersSorted1000.txt";
-	    Double[] numbersSorted1000 = readFile(numbersSorted1000Path, 1000);
+        String numbersSorted1000Path = "./numbersSorted1000.txt";
+        Double[] numbersSorted1000 = readFile(numbersSorted1000Path, 1000);
 		
-	    if(sortingMethod.equals("BubbleSort"))
-	    {
-		    long start = System.nanoTime();
-		    BubbleSort.sort(numbers1000);
-		    long end = System.nanoTime();
-		    long timeElapsed1 = (end - start);
+        if(sortingMethod.equals("BubbleSort"))
+        {
+            long start = System.nanoTime();
+            BubbleSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-		    start = System.nanoTime();
-		    BubbleSort.sort(numbers10000);
-		    end = System.nanoTime();
-		    long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            BubbleSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-		    start = System.nanoTime();
-		    BubbleSort.sort(numbers1000Duplicates);
-		    end = System.nanoTime();
-		    long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            BubbleSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-		    start = System.nanoTime();
-		    BubbleSort.sort(numbersNearlyOrdered1000);
-		    end = System.nanoTime();
-		    long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            BubbleSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-		    start = System.nanoTime();
-		    BubbleSort.sort(numbersReverse1000);
-		    end = System.nanoTime();
-		    long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            BubbleSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-		    start = System.nanoTime();
-		    BubbleSort.sort(numbersSorted1000);
-		    end = System.nanoTime();
-		    long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            BubbleSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-		    System.out.println("BubbleSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+            System.out.println("BubbleSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
 											  + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
 											  + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
 											  + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
@@ -336,32 +336,32 @@ public class CompareSortingAlgorithms
      */
     private static Double[] readFile(String fileName, int size)
     {
-	    Double[] array = null;
-	    if(size > 0)
-	    {
-		    try
-		    {
-			    File numbers = new File(fileName);
-			    FileReader fileReader = new FileReader(numbers);
-			    BufferedReader bufferedReader = new BufferedReader(fileReader);
+        Double[] array = null;
+        if(size > 0)
+        {
+            try
+            {
+                File numbers = new File(fileName);
+                FileReader fileReader = new FileReader(numbers);
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
 				
-			    array = new Double[size];
-			    int arrayIndex = 0;
+                array = new Double[size];
+                int arrayIndex = 0;
 				
-			    String line = null;
-			    while((line = bufferedReader.readLine()) != null)
-			    {
-				    Double number = Double.parseDouble(line.trim());
-				    array[arrayIndex] = number;
-				    arrayIndex++;
-			    }
-		    }
-		    catch(IOException e)
-		    {
-			    e.printStackTrace();
-		    }
-	    }
+                String line = null;
+                while((line = bufferedReader.readLine()) != null)
+                {
+                    Double number = Double.parseDouble(line.trim());
+                    array[arrayIndex] = number;
+                    arrayIndex++;
+                }
+            }
+            catch(IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
 	    
-	    return array;
-	}
+        return array;
+    }
 }
