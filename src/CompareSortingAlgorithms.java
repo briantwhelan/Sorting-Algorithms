@@ -87,245 +87,245 @@ public class CompareSortingAlgorithms
 											  + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											  + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
 	    }
-		else if(sortingMethod.equals("HeapSort"))
-		{
-			long start = System.nanoTime();
-			HeapSort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+        else if(sortingMethod.equals("HeapSort"))
+        {
+            long start = System.nanoTime();
+            HeapSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			HeapSort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            HeapSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			HeapSort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            HeapSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			HeapSort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            HeapSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			HeapSort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            HeapSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			HeapSort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            HeapSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("HeapSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+            System.out.println("HeapSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
 											+ "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
 											+ "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
 											+ "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											+ "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											+ "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else if(sortingMethod.equals("InsertionSort"))
-		{
-			long start = System.nanoTime();
-			InsertionSort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+	    }
+        else if(sortingMethod.equals("InsertionSort"))
+        {
+            long start = System.nanoTime();
+            InsertionSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			InsertionSort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            InsertionSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			InsertionSort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            InsertionSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			InsertionSort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            InsertionSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			InsertionSort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            InsertionSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			InsertionSort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            InsertionSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("InsertionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-												 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-												 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-												 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-												 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-												 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else if(sortingMethod.equals("MergeSort"))
-		{
-			long start = System.nanoTime();
-			MergeSort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+            System.out.println("InsertionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+											     + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+											     + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+	    }
+        else if(sortingMethod.equals("MergeSort"))
+        {
+            long start = System.nanoTime();
+            MergeSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			MergeSort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            MergeSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			MergeSort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            MergeSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			MergeSort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            MergeSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			MergeSort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            MergeSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			MergeSort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            MergeSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("MergeSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+            System.out.println("MergeSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
 											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
 											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
 											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else if(sortingMethod.equals("Quicksort"))
-		{
-			long start = System.nanoTime();
-			Quicksort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+	    }
+        else if(sortingMethod.equals("Quicksort"))
+        {
+            long start = System.nanoTime();
+            Quicksort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			Quicksort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            Quicksort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			Quicksort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            Quicksort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			Quicksort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            Quicksort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			Quicksort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            Quicksort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			Quicksort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            Quicksort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("Quicksort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+            System.out.println("Quicksort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
 											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
 											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
 											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
 											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
 											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else if(sortingMethod.equals("SelectionSort"))
-		{
-			long start = System.nanoTime();
-			SelectionSort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+	    }
+        else if(sortingMethod.equals("SelectionSort"))
+        {
+            long start = System.nanoTime();
+            SelectionSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			SelectionSort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            SelectionSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			SelectionSort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            SelectionSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			SelectionSort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            SelectionSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			SelectionSort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            SelectionSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			SelectionSort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            SelectionSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("SelectionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-												 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-												 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-												 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-												 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-												 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else if(sortingMethod.equals("ShellSort"))
-		{
-			long start = System.nanoTime();
-			ShellSort.sort(numbers1000);
-			long end = System.nanoTime();
-			long timeElapsed1 = (end - start);
+            System.out.println("SelectionSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+											     + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+											     + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+											     + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+											     + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+											     + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+	    }
+        else if(sortingMethod.equals("ShellSort"))
+        {
+            long start = System.nanoTime();
+            ShellSort.sort(numbers1000);
+            long end = System.nanoTime();
+            long timeElapsed1 = (end - start);
 			
-			start = System.nanoTime();
-			ShellSort.sort(numbers10000);
-			end = System.nanoTime();
-			long timeElapsed2 = (end - start);
+            start = System.nanoTime();
+            ShellSort.sort(numbers10000);
+            end = System.nanoTime();
+            long timeElapsed2 = (end - start);
 			
-			start = System.nanoTime();
-			ShellSort.sort(numbers1000Duplicates);
-			end = System.nanoTime();
-			long timeElapsed3 = (end - start);
+            start = System.nanoTime();
+            ShellSort.sort(numbers1000Duplicates);
+            end = System.nanoTime();
+            long timeElapsed3 = (end - start);
 			
-			start = System.nanoTime();
-			ShellSort.sort(numbersNearlyOrdered1000);
-			end = System.nanoTime();
-			long timeElapsed4 = (end - start);
+            start = System.nanoTime();
+            ShellSort.sort(numbersNearlyOrdered1000);
+            end = System.nanoTime();
+            long timeElapsed4 = (end - start);
 			
-			start = System.nanoTime();
-			ShellSort.sort(numbersReverse1000);
-			end = System.nanoTime();
-			long timeElapsed5 = (end - start);
+            start = System.nanoTime();
+            ShellSort.sort(numbersReverse1000);
+            end = System.nanoTime();
+            long timeElapsed5 = (end - start);
 			
-			start = System.nanoTime();
-			ShellSort.sort(numbersSorted1000);
-			end = System.nanoTime();
-			long timeElapsed6 = (end - start);
+            start = System.nanoTime();
+            ShellSort.sort(numbersSorted1000);
+            end = System.nanoTime();
+            long timeElapsed6 = (end - start);
 			
-			System.out.println("ShellSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
-												 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
-												 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
-												 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
-												 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
-												 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
-		}
-		else
-		{
-		    System.out.println("Invalid sort method.");
-		}
-	}
+            System.out.println("ShellSort Times:\n\tnumbers1000: " + timeElapsed1 + " nanoseconds"
+											 + "\n\tnumbers10000: " + timeElapsed2 + " nanoseconds"
+											 + "\n\tnumbers1000Duplicates: " + timeElapsed3 + " nanoseconds"
+											 + "\n\tnumbersNearlyOrdered1000: " + timeElapsed4 + " nanoseconds"
+											 + "\n\tnumbersReverse1000: " + timeElapsed5 + " nanoseconds"
+											 + "\n\tnumbersSorted1000: " + timeElapsed6 + " nanoseconds\n");
+	    }
+        else
+        {
+             System.out.println("Invalid sort method.");
+        }
+    }
 	
     /**
      * Reads the specified {@code File} (if it exists) into a {@code Double} array.
