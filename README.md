@@ -2,13 +2,14 @@
 ## Overview
 
 | Sorting Algorithm | Best-case Time Complexity | Worst-case Time Complexity | Space Complexity | Stable? | Inplace? |
-|:-----------------:|:-------------------------:|:--------------------------:|:----------------:|:-------:|:--------:|
-|    Bubble Sort    |          &Theta;(N)         |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
-|   Insertion Sort  |          &Theta;(N)         |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   Yes   |    Yes   |
-|     Merge Sort    |        &Theta;(NlogN)       |        &Theta;(NlogN)        |     &Theta;(N)     |   Yes   |    No    |
-|     Quicksort     |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |    &Theta;(N)   |    No   |    Yes   |
-|   Selection Sort  |         &Theta;(N<sup>2</sup>)        |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
-|     Shell Sort    |        &Theta;(NlogN)       |         &Theta;(N<sup>2</sup>)         |     &Theta;(1)     |   No   |    Yes   |
+|-------------------|---------------------------|----------------------------|------------------|---------|----------|
+| Bubble Sort       | &Theta;(N)                | &Theta;(N<sup>2</sup>)     | &Theta;(1)       | Yes     | Yes      |
+| Heap Sort         | &Theta;(N)                | &Theta;(NlogN)             | &Theta;(1)       | No      | Yes      |
+| Insertion Sort    | &Theta;(N)                | &Theta;(N<sup>2</sup>)     | &Theta;(1)       | Yes     | Yes      |
+| Merge Sort        | &Theta;(NlogN)            | &Theta;(NlogN)             | &Theta;(N)       | Yes     | No       |
+| Quicksort         | &Theta;(NlogN)            | &Theta;(N<sup>2</sup>)     | &Theta;(N)       | No      | Yes      |
+| Selection Sort    | &Theta;(N<sup>2</sup>)    | &Theta;(N<sup>2</sup>)     | &Theta;(1)       | No      | Yes      |
+| Shell Sort        | &Theta;(NlogN)            | &Theta;(N<sup>2</sup>)     | &Theta;(1)       | No      | Yes      |
 
 where N is the length of the array to be sorted
 
@@ -31,6 +32,23 @@ Bubble Sort is both a stable and in-place sorting algorithm. It does not require
 
 ### Uses and Final Thoughts
 Bubble Sort is a simple sorting algorithm and has as advantage over many sorting algorithms (but not Insertion Sort) in that it can detect when the array is already sorted. However, in reality, there are far better algorithms for efficiency and Bubble Sort's order of growth makes it unusable for larger input sizes. For these reasons, it is rarely used other than for educational purposes. 
+
+## Heap Sort
+### How It Works
+Heap Sort works by treasting the unsorted input array as a complete binary tree. From there, we can construct a maximum binary heap. Once this is done, the maximum element can be removed repeatedly and placed at its correct final position in the array, leading to a fully sorted array.
+
+### Space and Time Complexity
+Heap Sort has a worst-case time complexity of &Theta;(NlogN) as the array is treated like a maximum binary heap leading to this order of growth. This is the best possible worst-case time complexity possible (without relying on other special cases).
+
+Heap Sort has a best-case time complexity of &Theta;(N) in the case that the array is already in a maximum binary heap meaning that no initial construction of the maximum binary heap is needed, leading to this order of growth.
+
+Heap Sort is not stable but is an in-place sorting algorithm. It does not require any additional memory meaning it has a worst-case space complexity of &Theta;(1).
+
+### Potential Improvements
+- **Bottom-Up HeapSort** - the number of comparisons required can be reduced by implementing a bottom-up approach. In the standard top-down approach, when a largest element is removed from the heap, it is replaced by an element from the lowest level of the heap and then is sunk down to its correct position to restore the maximum binary heap. However, this element taken from the bottom level is usually one of the smallest elements in the heap meaning it takes more steps and therefore more comparisons to sink the element back down the heap to its correct position. In the bottom-up approach, it finds a leaf which has the property that it and all of its ancestors are greater than or equal to their siblings (similar to insertion in a binary heap), and then searches upward from this leaf for the correct position to insert the element taken from the bottom level to replace the largest element that was removed. Both approaches result in the same binary heap state, however, the bottom-up approach requires only one comparison per level which is far less than that of the top-down approach. [See here for more information.](https://en.wikipedia.org/wiki/Heapsort#Variations) (I have not implemented this improvement in my algorithm)
+- **Ternary HeapSort** - using a ternary heap instead of a binary heap can have some performance improvements but is far more complicated to program. A ternary heap would have three children for each node in the ternary heap as opposed to the two children in a binary heap. (I have not implemented this improvement in my algorithm)
+
+### Uses and Final Thoughts
 
 ## Insertion Sort
 ### How It Works
